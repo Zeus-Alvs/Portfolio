@@ -41,10 +41,10 @@ export default function HeroSection() {
       <style>{`
         @media (max-width: 768px) {
           .hero-content-block {
-            bottom: 27vh !important;
+            bottom: 33vh !important;
           }
           .hero-scroll-indicator {
-            bottom: 4rem !important;
+            bottom: 7rem !important;
           }
         }
       `}</style>
