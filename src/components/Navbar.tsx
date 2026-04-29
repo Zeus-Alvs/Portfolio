@@ -19,6 +19,7 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [scrollDist, setScrollDist] = useState(800);
   const [yTravel, setYTravel] = useState(400);
+  const [targetScale, setTargetScale] = useState(0.12);
   const { scrollY } = useScroll();
 
   // Wait for client-side mount before using createPortal
@@ -29,6 +30,10 @@ export default function Navbar() {
   useEffect(() => {
     setScrollDist(Math.max(600, window.innerHeight * 0.7));
     setYTravel((window.innerHeight / 2) - 35);
+    // Mobile: larger target scale so docked ZEUS matches burger link size
+    if (window.innerWidth <= 768) {
+      setTargetScale(0.24);
+    }
     const timer = setTimeout(() => setIsLoaded(true), 200);
     return () => clearTimeout(timer);
   }, []);
@@ -73,7 +78,7 @@ export default function Navbar() {
     }, 500);
   };
 
-  const titleScale = useTransform(scrollY, [0, scrollDist], [1, 0.12]);
+  const titleScale = useTransform(scrollY, [0, scrollDist], [1, targetScale]);
   const yOffsetNumber = useTransform(scrollY, [0, scrollDist * 0.55], [0, yTravel]);
   const titleY = useTransform(yOffsetNumber, (val) => `calc(-50% - ${val}px)`);
 
@@ -91,7 +96,7 @@ export default function Navbar() {
             font-size: clamp(5.5rem, 25vw, 8rem) !important;
           }
           .zeus-title-anchor {
-            transform-origin: center top !important;
+            top: 43vh !important;
           }
           .burger-link {
             font-size: 1.5rem !important;
