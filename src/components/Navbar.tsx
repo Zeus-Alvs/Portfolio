@@ -84,6 +84,21 @@ export default function Navbar() {
   // ═══════════════════════════════════════════════════════════
   const navContent = (
     <>
+      {/* ── Mobile-only overrides (does NOT affect desktop) ── */}
+      <style>{`
+        @media (max-width: 768px) {
+          .zeus-letter {
+            font-size: clamp(5.5rem, 25vw, 8rem) !important;
+          }
+          .zeus-title-anchor {
+            transform-origin: center top !important;
+          }
+          .burger-link {
+            font-size: 1.5rem !important;
+            padding: 0.8rem 1.5rem !important;
+          }
+        }
+      `}</style>
       <motion.nav
         style={{
           position: 'fixed',
@@ -108,6 +123,7 @@ export default function Navbar() {
 
         {/* Central Logo - Spans across Hero to Nav fluidly */}
         <motion.a
+          className="zeus-title-anchor"
           href="#hero"
           onClick={(e) => { e.preventDefault(); handleLinkClick('#hero'); }}
           style={{
@@ -129,6 +145,7 @@ export default function Navbar() {
         >
           {titleLetters.map((letter, i) => (
             <motion.span
+              className="zeus-letter"
               key={i}
               initial={{ opacity: 0, y: 80, rotateX: -90 }}
               animate={{
@@ -236,6 +253,7 @@ export default function Navbar() {
 
             {navLinks.map((link, i) => (
               <motion.a
+                className="burger-link"
                 key={link.label}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); handleLinkClick(link.href); }}
