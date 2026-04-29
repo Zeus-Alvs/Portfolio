@@ -1,36 +1,38 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch's name
   push:
-    branches: [ main, master ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+    branches: [ main ]
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout your repository
         uses: actions/checkout@v4
-      
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          # Aqui ele detecta automaticamente se você usa npm, yarn ou pnpm
-          node-version: 20
+          node-version: 22 # Mudamos para a versão 22 (LTS atual)
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Astro
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist # Onde o Astro joga o site pronto
 
   deploy:
     needs: build
