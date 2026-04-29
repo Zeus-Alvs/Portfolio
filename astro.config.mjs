@@ -7,4 +7,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: 'https://zeus-alvs.github.io',
+  base: '/portifolio',
 });
