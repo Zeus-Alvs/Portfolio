@@ -2,7 +2,11 @@ import { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 const GITHUB_URL = 'https://github.com/Zeus-Alvs';
+<<<<<<< HEAD
 const PROFILE_IMG = 'Portfolio/images/github-avatar.jpg';
+=======
+const PROFILE_IMG = '/Portfolio/images/github-avatar.jpg';
+>>>>>>> fd21a43f0ceb42d72b2151e3ba504ef3918c0e6f
 
 export default function GitHubSection() {
   const cardRef = useRef<HTMLDivElement>(null);
