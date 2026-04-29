@@ -8,15 +8,15 @@ interface TechCategory {
 const categories: TechCategory[] = [
   {
     label: 'LANGUAGES',
-    items: ['C++', 'Java', 'PHP', 'JavaScript', 'SQL'],
+    items: ['C++', 'Java', 'PHP', 'Python', 'JavaScript', 'TypeScript', 'MySQL', 'MongoDB'],
   },
   {
     label: 'FRAMEWORKS & TOOLS',
-    items: ['Laravel', 'Next.js', 'Docker', 'Git'],
+    items: ['Next.js', 'Laravel', 'Django', 'Docker', 'Git', 'N8N', 'Blender'],
   },
   {
     label: 'HARDWARE',
-    items: ['Manutenção de Hardware', 'Redes', 'Firmware (ESP32)'],
+    items: ['Manutenção de Hardware', 'Redes', 'Sistemas embarcados'],
   },
 ];
 
