@@ -35,7 +35,7 @@ export default function Navbar() {
     if (window.innerWidth <= 768) {
       setTargetScale(0.24);
       setScrollDist(Math.max(350, h * 0.4));  // Finish animation earlier
-      setYTravel(h * 0.43 - 25);              // Push docked ZEUS up to visually center in navbar
+      setYTravel(h * 0.43 - 20);              // Push docked ZEUS up to visually center in navbar
     }
     const timer = setTimeout(() => setIsLoaded(true), 200);
     return () => clearTimeout(timer);
