@@ -8,5 +8,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://zeus-alvs.github.io',
-  base: '/portifolio',
+  base: '/portfolio',
 });
