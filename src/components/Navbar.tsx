@@ -28,11 +28,14 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setScrollDist(Math.max(600, window.innerHeight * 0.7));
-    setYTravel((window.innerHeight / 2) - 35);
-    // Mobile: larger target scale so docked ZEUS matches burger link size
+    const h = window.innerHeight;
+    setScrollDist(Math.max(600, h * 0.7));
+    setYTravel((h / 2) - 35);
+    // Mobile-only overrides (desktop values untouched)
     if (window.innerWidth <= 768) {
       setTargetScale(0.24);
+      setScrollDist(Math.max(350, h * 0.4));  // Finish animation earlier
+      setYTravel(h * 0.43 - 35);              // Match CSS top:43vh → land at 35px
     }
     const timer = setTimeout(() => setIsLoaded(true), 200);
     return () => clearTimeout(timer);

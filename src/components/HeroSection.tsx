@@ -37,6 +37,17 @@ export default function HeroSection() {
         backgroundColor: 'transparent',
       }}
     >
+      {/* Mobile-only overrides for hero sub-elements */}
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-content-block {
+            bottom: 27vh !important;
+          }
+          .hero-scroll-indicator {
+            bottom: 4rem !important;
+          }
+        }
+      `}</style>
       {/* Subtle radial glow */}
       <motion.div
         style={{
@@ -73,6 +84,7 @@ export default function HeroSection() {
 
       {/* ═══ Main Content Block ═══ */}
       <motion.div
+        className="hero-content-block"
         style={{
           position: 'absolute',
           bottom: '20vh',  // Push to bottom safely above scroll indicator
@@ -122,6 +134,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.div
+        className="hero-scroll-indicator"
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoaded ? 1 : 0 }}
         transition={{ delay: 2.8, duration: 1 }}
