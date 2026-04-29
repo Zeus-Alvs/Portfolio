@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import AboutSection from '../components/AboutSection';
+import Collections from '../components/Collections';
+import Atelier from '../components/Atelier';
+import GitHubSection from '../components/GitHubSection';
+import Timeline from '../components/Timeline';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar client:load />
+  <div id="page-content" style={{ transition: 'opacity 0.4s ease' }}>
+    <HeroSection client:load />
+    <AboutSection client:visible />
+    <Collections client:visible />
+    <Atelier client:visible />
+    <GitHubSection client:visible />
+    <Timeline client:visible />
+    <Footer />
+  </div>
+</Layout>

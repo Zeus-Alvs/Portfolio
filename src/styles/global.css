@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════
+   ZEUS Portfolio — Dark Luxury Editorial Design System
+   High-End Minimal · Gucci × Technical Documentation
+   ═══════════════════════════════════════════════════════════════ */
+
+/* — Google Fonts — */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+/* — Custom Theme — */
+@theme {
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+
+  /* Dark Luxury Palette */
+  --color-bg: #000000;
+  --color-bg-elevated: #0A0A0A;
+  --color-bg-subtle: #111111;
+  --color-surface: #0D0D0D;
+
+  --color-text: #FFFFFF;
+  --color-text-secondary: #999999;
+  --color-text-muted: #555555;
+  --color-text-dim: #333333;
+
+  /* Borders — ultra thin */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+  --color-border-active: rgba(255, 255, 255, 0.4);
+
+  /* Accent — muted gold for hover details */
+  --color-accent: #C9A96E;
+  --color-accent-dim: rgba(201, 169, 110, 0.15);
+}
+
+/* — Base Reset & Typography — */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+/* — Selection — */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* — Scrollbar — */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-dim);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* — Focus — */
+:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* — Global Transitions — */
+a,
+button {
+  transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+              opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+              border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* — Outline Button — */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.8rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-text);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  z-index: 0;
+}
+
+.btn-outline:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-outline:hover {
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+
+.btn-outline span,
+.btn-outline svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* — Thin Border Utility — */
+.border-ultra {
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+/* — Section padding — */
+.section-padding {
+  padding: clamp(5rem, 12vw, 10rem) clamp(1.5rem, 6vw, 5rem);
+}
+
+/* — Max width container — */
+.container-editorial {
+  max-width: 1100px;
+  margin: 0 auto;
+}

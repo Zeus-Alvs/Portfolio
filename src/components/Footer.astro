@@ -1,0 +1,157 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="contact" style="
+  padding: clamp(5rem, 12vw, 10rem) clamp(1.5rem, 6vw, 5rem) clamp(2rem, 4vw, 3rem);
+  max-width: 1100px;
+  margin: 0 auto;
+">
+  <!-- Top border -->
+  <div style="
+    width: 100%;
+    height: 0.5px;
+    background-color: rgba(255,255,255,0.06);
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  "></div>
+
+  <div style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  ">
+    <!-- Label -->
+    <p style="
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.4em;
+      color: #555555;
+      text-transform: uppercase;
+      font-weight: 300;
+    ">
+      006 — CONTACT
+    </p>
+
+    <!-- Title -->
+    <h2 style="
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      text-align: center;
+      margin-right: -0.12em;
+    ">
+      Let's <em>Connect</em>
+    </h2>
+
+    <!-- Subtitle -->
+    <p style="
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: #555555;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-align: center;
+      max-width: 400px;
+    ">
+      AVAILABLE FOR FREELANCE, COLLABORATIONS & BACK-END ENGINEERING ROLES
+    </p>
+
+    <!-- Gold divider -->
+    <div style="
+      width: 30px;
+      height: 0.5px;
+      background-color: #C9A96E;
+      margin: 0.5rem 0;
+    "></div>
+
+    <!-- Email -->
+    <a
+      href="mailto:zeus.alvs@dev.com"
+      id="contact-email"
+      class="btn-outline"
+      style="margin-top: 0.5rem;"
+    >
+      <span>GET IN TOUCH</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="0.8">
+        <line x1="0" y1="6" x2="10" y2="6" />
+        <polyline points="6,2 10,6 6,10" />
+      </svg>
+    </a>
+
+    <!-- Social Links -->
+    <div style="
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 2rem;
+    ">
+      <a href="https://github.com/Zeus-Alvs" target="_blank" rel="noopener noreferrer" class="social-link" style="
+        font-family: 'Inter', sans-serif;
+        font-size: 0.55rem;
+        letter-spacing: 0.2em;
+        color: #333333;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+      ">GITHUB</a>
+      
+      <span style="color: #1A1A1A; font-size: 0.3rem;">●</span>
+      
+      <a href="#" class="social-link" style="
+        font-family: 'Inter', sans-serif;
+        font-size: 0.55rem;
+        letter-spacing: 0.2em;
+        color: #333333;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+      ">LINKEDIN</a>
+    </div>
+
+    <!-- Bottom bar -->
+    <div style="
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.5rem;
+      border-top: 0.5px solid rgba(255,255,255,0.04);
+    ">
+      <p style="
+        font-family: 'Inter', sans-serif;
+        font-size: 0.5rem;
+        letter-spacing: 0.2em;
+        color: #333333;
+        text-transform: uppercase;
+        font-weight: 300;
+      ">
+        © {currentYear} ZEUS
+      </p>
+
+      <p style="
+        font-family: 'Inter', sans-serif;
+        font-size: 0.5rem;
+        letter-spacing: 0.2em;
+        color: #333333;
+        text-transform: uppercase;
+        font-weight: 300;
+      ">
+        BUILT WITH ASTRO & REACT
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .social-link {
+    transition: color 0.3s ease !important;
+  }
+  .social-link:hover {
+    color: #C9A96E !important;
+  }
+</style>

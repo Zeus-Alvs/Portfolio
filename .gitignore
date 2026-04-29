@@ -1,0 +1,38 @@
+# Build output
+dist/
+.vercel
+.netlify
+.output
+.worker
+
+# Astro generated
+.astro/
+
+# Dependencies
+node_modules/
+package-lock.json.backup
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.production
+.env.development
+.env.local
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db

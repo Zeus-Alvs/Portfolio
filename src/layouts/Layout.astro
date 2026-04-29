@@ -1,0 +1,164 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "ZEUS — Software Systems & Back-End Engineering",
+  description = "Portfólio editorial de luxo. Back-End Engineering, Infraestrutura e Sistemas Embarcados."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#000000" />
+    
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <canvas id="quantum-dust" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0;"></canvas>
+    
+    <main style="position: relative; z-index: 10;">
+      <slot />
+    </main>
+
+    <script>
+      const canvas = document.getElementById('quantum-dust') as HTMLCanvasElement;
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+        
+        let particleCount = Math.floor((width * height) / 7000); 
+        let particles: Particle[] = [];
+        
+        let mouse = {
+          x: -1000,
+          y: -1000,
+          radius: 120
+        };
+        
+        window.addEventListener('resize', () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+          particleCount = Math.floor((width * height) / 7000);
+          init();
+        });
+        
+        window.addEventListener('mousemove', (e) => {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+        
+        window.addEventListener('mouseout', () => {
+          mouse.x = -1000;
+          mouse.y = -1000;
+        });
+        
+        class Particle {
+          baseX: number;
+          baseY: number;
+          x: number;
+          y: number;
+          size: number;
+          opacity: number;
+          vx: number;
+          vy: number;
+
+          constructor() {
+            this.baseX = Math.random() * width;
+            this.baseY = Math.random() * height;
+            this.x = this.baseX;
+            this.y = this.baseY;
+            this.size = Math.random() * 1.0 + 1.0; // 1px a 2px (um pouco mais sutil)
+            this.opacity = Math.random() * 0.35 + 0.10; // 10% a 45% opacidade
+            
+            // Movimento natural com tendência para cima (drift vertical)
+            this.vx = (Math.random() - 0.5) * 0.1;
+            this.vy = (Math.random() - 0.5) * 0.1 - 0.15; // Bias negativo puxa as partículas suavemente para cima
+          }
+          
+          update() {
+            // Movimento natural contínuo
+            this.baseX += this.vx;
+            this.baseY += this.vy;
+            
+            // Reaparece do outro lado caso saia da tela
+            if (this.baseX < 0) this.baseX = width;
+            if (this.baseX > width) this.baseX = 0;
+            if (this.baseY < 0) this.baseY = height;
+            if (this.baseY > height) this.baseY = 0;
+            
+            // Interação com o mouse (Campo Magnético / Repulsão)
+            let dx = mouse.x - this.baseX;
+            let dy = mouse.y - this.baseY;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < mouse.radius) {
+              let forceDirectionX = dx / distance;
+              let forceDirectionY = dy / distance;
+              // Curva suave para repulsão
+              let force = Math.pow((mouse.radius - distance) / mouse.radius, 2);
+              
+              // Distância máxima do empurrão
+              let pushX = forceDirectionX * force * 30;
+              let pushY = forceDirectionY * force * 30;
+              
+              this.x = this.baseX - pushX;
+              this.y = this.baseY - pushY;
+            } else {
+              // Voltar à posição original suavemente usando easing
+              this.x -= (this.x - this.baseX) * 0.05;
+              this.y -= (this.y - this.baseY) * 0.05;
+            }
+          }
+          
+          draw() {
+            if (!ctx) return;
+            ctx.fillStyle = `rgba(201, 169, 110, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+        
+        function init() {
+          particles = [];
+          for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+          }
+        }
+        
+        function animate() {
+          if (!ctx) return;
+          ctx.clearRect(0, 0, width, height);
+          
+          for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+          }
+          
+          requestAnimationFrame(animate);
+        }
+        
+        init();
+        animate();
+      }
+    </script>
+  </body>
+</html>
+
+
