@@ -107,7 +107,7 @@ export default function Navbar() {
           }
           .burger-overlay {
             justify-content: flex-start !important;
-            padding-top: calc(70px + 2rem) !important;
+            padding-top: calc(70px + 2rem - 27px) !important;
             gap: 2rem !important;
           }
         }
