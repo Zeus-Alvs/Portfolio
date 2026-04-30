@@ -35,7 +35,7 @@ export default function Navbar() {
     if (window.innerWidth <= 768) {
       setTargetScale(0.24);
       setScrollDist(Math.max(350, h * 0.4));  // Finish animation earlier
-      setYTravel(h * 0.43 - 12);              // Push docked ZEUS up to visually center in navbar
+      setYTravel(h * 0.43 - 10);              // Push docked ZEUS up to visually center in navbar
     }
     const timer = setTimeout(() => setIsLoaded(true), 200);
     return () => clearTimeout(timer);
@@ -104,6 +104,11 @@ export default function Navbar() {
           .burger-link {
             font-size: 1.5rem !important;
             padding: 0.8rem 1.5rem !important;
+          }
+          .burger-overlay {
+            justify-content: flex-start !important;
+            padding-top: calc(70px + 1.6rem) !important;
+            gap: 0px !important;
           }
         }
       `}</style>
@@ -231,6 +236,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            className="burger-overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
