@@ -1,8 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const lang = useStore(currentLang);
+  const t = dict[lang].hero;
+  
   const sectionRef = useRef<HTMLElement>(null);
 
   // Scroll progress through the tall section (0 → 1)
@@ -122,13 +128,13 @@ export default function HeroSection() {
             fontFamily: "'Inter', sans-serif",
             fontSize: 'clamp(0.6rem, 1vw, 0.75rem)',
             letterSpacing: '0.35em',
-            color: '#999999',
+            color: '#CCCCCC',
             textTransform: 'uppercase',
-            fontWeight: 300,
+            fontWeight: 400,
             opacity: elementsOpacity,
           }}
         >
-          PORTFOLIO — 2026
+          {t.portfolio}
         </motion.p>
       </motion.div>
 
@@ -153,19 +159,19 @@ export default function HeroSection() {
             fontFamily: "'Inter', sans-serif",
             fontSize: '0.5rem',
             letterSpacing: '0.4em',
-            color: '#333333',
+            color: '#888888',
             textTransform: 'uppercase',
-            fontWeight: 300,
+            fontWeight: 400,
           }}
         >
-          SCROLL
+          {t.scroll}
         </span>
         <motion.div
           animate={{ height: ['0px', '30px', '0px'] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
           style={{
             width: '0.5px',
-            backgroundColor: '#333333',
+            backgroundColor: '#888888',
           }}
         />
       </motion.div>
@@ -178,13 +184,13 @@ export default function HeroSection() {
           right: 'clamp(1.5rem, 4vw, 3rem)',
           fontFamily: "'Inter', sans-serif",
           fontSize: '0.5rem',
-          color: '#333333',
+          color: '#888888',
           letterSpacing: '0.3em',
-          fontWeight: 300,
+          fontWeight: 400,
           opacity: elementsOpacity,
         }}
       >
-        EST. 2024
+        {t.est}
       </motion.div>
     </section>
   );

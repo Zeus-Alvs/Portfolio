@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import LanguageSwitcher from './LanguageSwitcher';
 
-const navLinks = [
-  { label: 'ABOUT', href: '#about' },
-  { label: 'COLLECTIONS', href: '#collections' },
-  { label: 'ATELIER', href: '#atelier' },
-  { label: 'GITHUB', href: '#github' },
-  { label: 'TIMELINE', href: '#timeline' },
-  { label: 'CONTACT', href: '#contact' },
-];
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 const titleLetters = 'ZEUS'.split('');
 
@@ -20,6 +16,18 @@ export default function Navbar() {
   const [scrollDist, setScrollDist] = useState(800);
   const [yTravel, setYTravel] = useState(400);
   const [targetScale, setTargetScale] = useState(0.12);
+  const lang = useStore(currentLang);
+  const t = dict[lang].navbar;
+
+  const navLinks = [
+    { label: t.about, href: '#about' },
+    { label: t.collections, href: '#collections' },
+    { label: t.atelier, href: '#atelier' },
+    { label: t.github, href: '#github' },
+    { label: t.timeline, href: '#timeline' },
+    { label: t.contact, href: '#contact' },
+  ];
+
   const { scrollY } = useScroll();
 
   // Wait for client-side mount before using createPortal
@@ -125,14 +133,14 @@ export default function Navbar() {
           justifyContent: 'space-between',
           alignItems: 'center',
           backdropFilter: isVisible && !isOpen ? 'blur(12px)' : 'none',
-          background: isVisible && !isOpen ? 'rgba(0,0,0,0.6)' : 'transparent',
+          background: isVisible && !isOpen ? 'rgba(18, 18, 18, 0.8)' : 'transparent',
           borderBottom: isVisible && !isOpen ? '0.5px solid rgba(255,255,255,0.06)' : '0.5px solid transparent',
           transition: 'background 0.5s ease, backdrop-filter 0.5s ease, border-color 0.5s ease',
           pointerEvents: isVisible || isOpen ? 'auto' : 'none',
         }}
       >
-        {/* Spacer on the left to balance the nav layout */}
-        <div style={{ width: '40px' }} />
+        {/* Language Switcher */}
+        <LanguageSwitcher />
 
         {/* Central Logo - Spans across Hero to Nav fluidly */}
         <motion.a
@@ -244,7 +252,7 @@ export default function Navbar() {
             style={{
               position: 'fixed',
               inset: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              backgroundColor: 'rgba(18, 18, 18, 0.7)',
               backdropFilter: 'none',
               zIndex: 999,
               display: 'flex',
@@ -326,7 +334,7 @@ export default function Navbar() {
                 letterSpacing: '0.25em',
                 textTransform: 'uppercase',
               }}>
-                SOFTWARE SYSTEMS & BACK-END
+                {t.footer}
               </span>
               <span style={{
                 fontFamily: "'Inter', sans-serif",

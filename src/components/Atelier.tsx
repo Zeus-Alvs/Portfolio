@@ -1,24 +1,12 @@
 import { motion } from 'framer-motion';
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 interface TechCategory {
   label: string;
   items: string[];
 }
-
-const categories: TechCategory[] = [
-  {
-    label: 'LANGUAGES',
-    items: ['C++', 'Java', 'PHP', 'Python', 'JavaScript', 'TypeScript', 'MySQL', 'MongoDB'],
-  },
-  {
-    label: 'FRAMEWORKS & TOOLS',
-    items: ['Next.js', 'Laravel', 'Django', 'Docker', 'Git', 'N8N', 'Blender'],
-  },
-  {
-    label: 'HARDWARE',
-    items: ['Manutenção de Hardware', 'Redes', 'Sistemas embarcados'],
-  },
-];
 
 const containerVariants = {
   hidden: {},
@@ -40,6 +28,24 @@ const itemVariants = {
 };
 
 export default function Atelier() {
+  const lang = useStore(currentLang);
+  const t = dict[lang].atelier;
+
+  const categories: TechCategory[] = [
+    {
+      label: t.categories.lang,
+      items: ['C++', 'Java', 'PHP', 'Python', 'JavaScript', 'TypeScript', 'MySQL', 'MongoDB'],
+    },
+    {
+      label: t.categories.frameworks,
+      items: ['Next.js', 'Laravel', 'Django', 'Docker', 'Git', 'N8N', 'Blender'],
+    },
+    {
+      label: t.categories.hardware,
+      items: t.hardwareItems,
+    },
+  ];
+
   return (
     <section id="atelier" className="section-padding">
       <div className="container-editorial">
@@ -56,13 +62,13 @@ export default function Atelier() {
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
-              color: '#555555',
+              color: '#A0A0A0',
               textTransform: 'uppercase',
               marginBottom: '1.5rem',
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
-            003 — THE ATELIER
+            {t.label}
           </p>
           <h2
             style={{
@@ -74,9 +80,9 @@ export default function Atelier() {
               lineHeight: 1.1,
             }}
           >
-            Tech
+            {t.title1}
             <br />
-            <span style={{ fontStyle: 'italic' }}>Stack</span>
+            <span style={{ fontStyle: 'italic' }}>{t.title2}</span>
           </h2>
           <div
             style={{
@@ -114,7 +120,7 @@ export default function Atelier() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: '0.55rem',
                   letterSpacing: '0.35em',
-                  color: '#555555',
+                  color: '#A0A0A0',
                   textTransform: 'uppercase',
                   marginBottom: '1.2rem',
                   fontWeight: 400,
@@ -143,7 +149,7 @@ export default function Atelier() {
                     variants={itemVariants}
                     style={{
                       padding: 'clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem)',
-                      background: '#000000',
+                      background: '#121212',
                       border: '0.5px solid rgba(255,255,255,0.04)',
                       display: 'flex',
                       alignItems: 'center',
@@ -154,7 +160,7 @@ export default function Atelier() {
                     }}
                     onMouseEnter={(e) => {
                       const t = e.currentTarget;
-                      t.style.background = '#0A0A0A';
+                      t.style.background = '#1a1a1a';
                       t.style.borderColor = 'rgba(201,169,110,0.2)';
                       const label = t.querySelector('.tech-label') as HTMLElement;
                       if (label) label.style.color = '#C9A96E';
@@ -163,12 +169,12 @@ export default function Atelier() {
                     }}
                     onMouseLeave={(e) => {
                       const t = e.currentTarget;
-                      t.style.background = '#000000';
+                      t.style.background = '#121212';
                       t.style.borderColor = 'rgba(255,255,255,0.04)';
                       const label = t.querySelector('.tech-label') as HTMLElement;
-                      if (label) label.style.color = '#999999';
+                      if (label) label.style.color = '#CCCCCC';
                       const dot = t.querySelector('.tech-dot') as HTMLElement;
-                      if (dot) dot.style.backgroundColor = '#333333';
+                      if (dot) dot.style.backgroundColor = '#888888';
                     }}
                   >
                     {/* Dot indicator */}
@@ -178,7 +184,7 @@ export default function Atelier() {
                         width: '4px',
                         height: '4px',
                         borderRadius: '50%',
-                        backgroundColor: '#333333',
+                        backgroundColor: '#888888',
                         flexShrink: 0,
                         transition: 'background-color 0.4s ease',
                       }}
@@ -189,8 +195,8 @@ export default function Atelier() {
                         fontFamily: "'Inter', sans-serif",
                         fontSize: 'clamp(0.7rem, 1vw, 0.8rem)',
                         letterSpacing: '0.1em',
-                        color: '#999999',
-                        fontWeight: 300,
+                        color: '#CCCCCC',
+                        fontWeight: 400,
                         transition: 'color 0.4s ease',
                       }}
                     >

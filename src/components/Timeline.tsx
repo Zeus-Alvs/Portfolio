@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 interface TimelineEntry {
   year: string;
@@ -6,49 +9,52 @@ interface TimelineEntry {
   subtitle: string;
   detail: string;
   type: 'education' | 'work' | 'certification';
+  completed?: boolean;
 }
 
-const entries: TimelineEntry[] = [
-  {
-    year: '2024 — 2025',
-    title: 'ETEC PG',
-    subtitle: 'IT Support',
-    detail:
-      'Técnico em Suporte para TI com foco em Redes, Hardwares, Embarcados e Sistemas.',
-    type: 'education',
-  },
-  {
-    year: '2025 — PRESENT',
-    title: 'FATEC PG',
-    subtitle: 'Software Development',
-    detail:
-      'Graduação em Desenvolvimento de Software com foco em Back-End e arquitetura de sistemas.',
-    type: 'education',
-  },
-  {
-    year: 'JUN 2025',
-    title: 'Oracle',
-    subtitle: 'Database Certification',
-    detail: 'Certificação profissional em banco de dados Oracle.',
-    type: 'certification',
-  },
-  {
-    year: '2025 — PRESENT',
-    title: 'Suporte Técnico',
-    subtitle: 'Estagiário em Mar Brasil',
-    detail:
-      'Atuação em diagnóstico e manutenção de hardware, redes e sistemas.',
-    type: 'work',
-  },
-];
-
-const typeLabels: Record<string, string> = {
-  education: 'EDUCATION',
-  work: 'PROFESSIONAL',
-  certification: 'CERTIFICATION',
-};
-
 export default function Timeline() {
+  const lang = useStore(currentLang);
+  const t = dict[lang].timeline;
+
+  const entries: TimelineEntry[] = [
+    {
+      year: '2024 — 2025',
+      title: 'ETEC PG',
+      subtitle: t.items.etec.subtitle,
+      detail: t.items.etec.detail,
+      type: 'education',
+      completed: true,
+    },
+    {
+      year: '2025 — PRESENT',
+      title: 'FATEC PG',
+      subtitle: t.items.fatec.subtitle,
+      detail: t.items.fatec.detail,
+      type: 'education',
+    },
+    {
+      year: 'JUN 2025',
+      title: 'Oracle',
+      subtitle: t.items.oracle.subtitle,
+      detail: t.items.oracle.detail,
+      type: 'certification',
+    },
+    {
+      year: '2025 — 2026',
+      title: 'Suporte Técnico',
+      subtitle: t.items.suporte.subtitle,
+      detail: t.items.suporte.detail,
+      type: 'work',
+      completed: true,
+    },
+  ];
+
+  const typeLabels: Record<string, string> = {
+    education: t.types.education,
+    work: t.types.work,
+    certification: t.types.certification,
+  };
+
   return (
     <section id="timeline" className="section-padding">
       <div className="container-editorial">
@@ -65,13 +71,13 @@ export default function Timeline() {
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
-              color: '#555555',
+              color: '#A0A0A0',
               textTransform: 'uppercase',
               marginBottom: '1.5rem',
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
-            005 — TIMELINE
+            {t.label}
           </p>
           <h2
             style={{
@@ -83,9 +89,9 @@ export default function Timeline() {
               lineHeight: 1.1,
             }}
           >
-            Experience
+            {t.title1}
             <br />
-            <span style={{ fontStyle: 'italic' }}>& Formation</span>
+            <span style={{ fontStyle: 'italic' }}>{t.title2}</span>
           </h2>
           <div
             style={{
@@ -152,7 +158,7 @@ export default function Timeline() {
                       borderRadius: '50%',
                       border: '0.5px solid rgba(255,255,255,0.2)',
                       backgroundColor:
-                        entry.type === 'certification'
+                        entry.type === 'certification' || entry.completed
                           ? '#C9A96E'
                           : 'transparent',
                       flexShrink: 0,
@@ -177,7 +183,7 @@ export default function Timeline() {
                         fontFamily: "'Inter', sans-serif",
                         fontSize: '0.55rem',
                         letterSpacing: '0.25em',
-                        color: '#555555',
+                        color: '#A0A0A0',
                         fontWeight: 400,
                         textTransform: 'uppercase',
                       }}
@@ -192,7 +198,7 @@ export default function Timeline() {
                         color:
                           entry.type === 'certification'
                             ? '#C9A96E'
-                            : '#333333',
+                            : '#888888',
                         fontWeight: 400,
                         padding: '0.2rem 0.5rem',
                         border: `0.5px solid ${entry.type === 'certification'
@@ -224,9 +230,9 @@ export default function Timeline() {
                       fontFamily: "'Inter', sans-serif",
                       fontSize: '0.6rem',
                       letterSpacing: '0.2em',
-                      color: '#666666',
+                      color: '#B0B0B0',
                       textTransform: 'uppercase',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       marginBottom: '0.8rem',
                     }}
                   >
@@ -237,8 +243,8 @@ export default function Timeline() {
                       fontFamily: "'Inter', sans-serif",
                       fontSize: 'clamp(0.75rem, 1vw, 0.85rem)',
                       lineHeight: 1.8,
-                      color: '#999999',
-                      fontWeight: 300,
+                      color: '#CCCCCC',
+                      fontWeight: 400,
                       maxWidth: '600px',
                     }}
                   >

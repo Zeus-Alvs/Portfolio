@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
+    "@nanostores/react": "^1.1.0",
     "@tailwindcss/vite": "^4.2.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^6.1.9",
     "framer-motion": "^12.9.4",
+    "nanostores": "^1.4.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "tailwindcss": "^4.2.4"

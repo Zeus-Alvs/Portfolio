@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
 /* ═══════════════════════════════════════════════════════════════
    ZEUS Portfolio — Dark Luxury Editorial Design System
    High-End Minimal · Gucci × Technical Documentation
    ═══════════════════════════════════════════════════════════════ */
 
 /* — Google Fonts — */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
 /* — Custom Theme — */
 @theme {
@@ -14,15 +15,15 @@
   --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
 
   /* Dark Luxury Palette */
-  --color-bg: #000000;
-  --color-bg-elevated: #0A0A0A;
-  --color-bg-subtle: #111111;
-  --color-surface: #0D0D0D;
+  --color-bg: #121212;
+  --color-bg-elevated: #1a1a1a;
+  --color-bg-subtle: #222222;
+  --color-surface: #1c1c1c;
 
   --color-text: #FFFFFF;
-  --color-text-secondary: #999999;
-  --color-text-muted: #555555;
-  --color-text-dim: #333333;
+  --color-text-secondary: #CCCCCC;
+  --color-text-muted: #A0A0A0;
+  --color-text-dim: #888888;
 
   /* Borders — ultra thin */
   --color-border: rgba(255, 255, 255, 0.08);
@@ -52,7 +53,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.02em;
   overflow-x: hidden;
   position: relative;

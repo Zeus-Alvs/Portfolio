@@ -1,5 +1,8 @@
 import { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 const GITHUB_URL = 'https://github.com/Zeus-Alvs';
 const PROFILE_IMG = '/Portfolio/images/github-avatar.jpg';
@@ -9,6 +12,8 @@ export default function GitHubSection() {
   const [glowPos, setGlowPos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const lang = useStore(currentLang);
+  const t = dict[lang].github;
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -33,13 +38,13 @@ export default function GitHubSection() {
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
-              color: '#555555',
+              color: '#A0A0A0',
               textTransform: 'uppercase',
               marginBottom: '1.5rem',
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
-            004 — GITHUB
+            {t.label}
           </p>
           <h2
             style={{
@@ -52,9 +57,9 @@ export default function GitHubSection() {
               marginBottom: '2rem',
             }}
           >
-            Open
+            {t.title1}
             <br />
-            <span style={{ fontStyle: 'italic' }}>Source</span>
+            <span style={{ fontStyle: 'italic' }}>{t.title2}</span>
           </h2>
           <div
             style={{
@@ -81,7 +86,7 @@ export default function GitHubSection() {
           onMouseLeave={() => setIsHovered(false)}
           style={{
             position: 'relative',
-            background: '#0A0A0A',
+            background: '#1a1a1a',
             border: '0.5px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '2px',
             overflow: 'hidden',
@@ -123,7 +128,7 @@ export default function GitHubSection() {
                 overflow: 'hidden',
                 position: 'relative',
                 border: '1px solid rgba(255,255,255,0.08)',
-                background: '#111111',
+                background: '#222222',
                 boxShadow: '0 10px 30px -10px rgba(0,0,0,0.5)',
               }}
             >
@@ -150,7 +155,7 @@ export default function GitHubSection() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: 'linear-gradient(170deg, #111111, #080808)',
+                    background: 'linear-gradient(170deg, #222222, #080808)',
                   }}
                 >
                   <span
@@ -213,14 +218,14 @@ export default function GitHubSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 'clamp(0.65rem, 1vw, 0.78rem)',
-                  color: '#999999',
-                  fontWeight: 300,
+                  color: '#CCCCCC',
+                  fontWeight: 400,
                   lineHeight: 1.7,
                   letterSpacing: '0.02em',
                   maxWidth: '400px',
                 }}
               >
-                Full-Stack Engineering & Embedded Systems | FATEC & ETEC.
+                {t.desc}
               </p>
 
               {/* Divider */}
@@ -244,11 +249,11 @@ export default function GitHubSection() {
                   letterSpacing: '0.3em',
                   color: 'rgba(255, 255, 255, 0.25)',
                   textTransform: 'uppercase',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   marginBottom: 'clamp(1.5rem, 2vw, 2rem)',
                 }}
               >
-                Main Stack: Next.js • Python • Java • SQL
+                {t.mainStack}
               </p>
 
               {/* CTA */}
@@ -287,7 +292,7 @@ export default function GitHubSection() {
                     t.style.letterSpacing = '0.25em';
                   }}
                 >
-                  <span>View Full Profile</span>
+                  <span>{t.btnProfile}</span>
                   <svg
                     width="10"
                     height="10"
@@ -351,9 +356,9 @@ export default function GitHubSection() {
           }}
         >
           {[
-            { label: 'REPOSITORIES', value: 'PUBLIC' },
-            { label: 'FOCUS', value: 'BACK-END' },
-            { label: 'STACK', value: 'PHP · JAVA · C++ · SQL · C# · JS · Python · TS' },
+            { label: t.stats.reposLabel, value: t.stats.reposValue },
+            { label: t.stats.focusLabel, value: t.stats.focusValue },
+            { label: t.stats.stackLabel, value: 'PHP · JAVA · C++ · SQL · C# · JS · Python · TS' },
           ].map((stat, i) => (
             <div
               key={stat.label}
@@ -369,9 +374,9 @@ export default function GitHubSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: '0.5rem',
                   letterSpacing: '0.25em',
-                  color: '#333333',
+                  color: '#888888',
                   textTransform: 'uppercase',
-                  fontWeight: 300,
+                  fontWeight: 400,
                   marginBottom: '0.4rem',
                 }}
               >
@@ -382,8 +387,8 @@ export default function GitHubSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
                   letterSpacing: '0.1em',
-                  color: '#999999',
-                  fontWeight: 300,
+                  color: '#CCCCCC',
+                  fontWeight: 400,
                 }}
               >
                 {stat.value}

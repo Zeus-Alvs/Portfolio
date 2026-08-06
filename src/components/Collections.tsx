@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 interface Project {
   id: number;
@@ -11,42 +14,6 @@ interface Project {
   linkLabel: string;
   tags: string[];
 }
-
-const projects: Project[] = [
-  {
-    id: 1,
-    number: '01',
-    title: 'Cosmic Mind',
-    category: 'Cognitive Development of Children with ADHD & Web Analytics Systems',
-    description:
-      'Uma plataforma que explora o desenvolvimento cognitivo através de sistemas web interativos. Combinando lógica de programação com arquitetura de interface, Cosmic Mind traduz processos mentais complexos em experiências digitais acessíveis.',
-    link: 'https://github.com/Zeus-Alvs/Cosmic-Mind.git',
-    linkLabel: 'VIEW REPOSITORY',
-    tags: ['Web Systems', 'Cognitive', 'Full-Stack'],
-  },
-  {
-    id: 2,
-    number: '02',
-    title: 'Aethesa',
-    category: 'Urban Fashion & Sustainable Web Experience',
-    description:
-      'Uma experiência web sustentável para o universo da moda urbana. Aethesa combina estética contemporânea com práticas de desenvolvimento consciente, criando uma plataforma que reflete os valores de sustentabilidade no design digital.',
-    link: 'https://github.com/Zeus-Alvs/Aethesa.git',
-    linkLabel: 'VIEW REPOSITORY',
-    tags: ['Fashion', 'Sustainability', 'Web Experience'],
-  },
-  {
-    id: 3,
-    number: '03',
-    title: 'Projeto C.A.S.A.',
-    category: 'Embedded Systems Development & Support For Autistic Individuals',
-    description:
-      'Trabalho de Conclusão de Curso focado no desenvolvimento de firmware para microcontroladores ESP32 e prototipagem 3D. Uma intersecção entre engenharia de software e hardware, demonstrando competência em sistemas embarcados.',
-    link: 'https://online.fliphtml5.com/zeusalvesmachado/ypqh',
-    linkLabel: 'VIEW PUBLICATION',
-    tags: ['ESP32', 'Firmware', '3D Prototyping', 'TCC'],
-  },
-];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -63,6 +30,41 @@ const cardVariants = {
 
 export default function Collections() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const lang = useStore(currentLang);
+  const t = dict[lang].collections;
+
+  const projects: Project[] = [
+    {
+      id: 1,
+      number: '01',
+      title: 'Cosmic Mind',
+      category: t.items.cosmic.category,
+      description: t.items.cosmic.desc,
+      link: 'https://github.com/Zeus-Alvs/Cosmic-Mind.git',
+      linkLabel: t.btnRepo,
+      tags: ['Web Systems', 'Cognitive', 'Full-Stack'],
+    },
+    {
+      id: 2,
+      number: '02',
+      title: 'Aethesa',
+      category: t.items.aethesa.category,
+      description: t.items.aethesa.desc,
+      link: 'https://github.com/Zeus-Alvs/Aethesa.git',
+      linkLabel: t.btnRepo,
+      tags: ['Fashion', 'Sustainability', 'Web Experience'],
+    },
+    {
+      id: 3,
+      number: '03',
+      title: 'Projeto C.A.S.A.',
+      category: t.items.casa.category,
+      description: t.items.casa.desc,
+      link: 'https://online.fliphtml5.com/zeusalvesmachado/ypqh',
+      linkLabel: t.btnPub,
+      tags: ['ESP32', 'Firmware', '3D Prototyping', 'TCC'],
+    },
+  ];
 
   return (
     <section id="collections" className="section-padding">
@@ -80,13 +82,13 @@ export default function Collections() {
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
-              color: '#555555',
+              color: '#A0A0A0',
               textTransform: 'uppercase',
               marginBottom: '1.5rem',
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
-            002 — THE COLLECTIONS
+            {t.label}
           </p>
           <div
             style={{
@@ -107,22 +109,22 @@ export default function Collections() {
                 lineHeight: 1.1,
               }}
             >
-              Selected
+              {t.title1}
               <br />
-              <span style={{ fontStyle: 'italic' }}>Works</span>
+              <span style={{ fontStyle: 'italic' }}>{t.title2}</span>
             </h2>
             <p
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: '0.6rem',
                 letterSpacing: '0.2em',
-                color: '#555555',
-                fontWeight: 300,
+                color: '#A0A0A0',
+                fontWeight: 400,
                 maxWidth: '250px',
                 textAlign: 'right',
               }}
             >
-              CURATED PROJECTS SHOWCASING TECHNICAL RANGE AND CREATIVE VISION
+              {t.subtitle}
             </p>
           </div>
           <div
@@ -180,7 +182,7 @@ export default function Collections() {
                   const num = e.currentTarget.querySelector(
                     '.proj-num'
                   ) as HTMLElement;
-                  if (num) num.style.color = '#333333';
+                  if (num) num.style.color = '#888888';
                 }}
               >
                 {/* Number */}
@@ -190,7 +192,7 @@ export default function Collections() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                     fontWeight: 100,
-                    color: '#333333',
+                    color: '#888888',
                     lineHeight: 1,
                     transition: 'color 0.4s ease',
                     minWidth: 'clamp(3rem, 5vw, 4.5rem)',
@@ -218,10 +220,10 @@ export default function Collections() {
                       fontFamily: "'Inter', sans-serif",
                       fontSize: '0.6rem',
                       letterSpacing: '0.2em',
-                      color: '#555555',
+                      color: '#A0A0A0',
                       textTransform: 'uppercase',
                       marginTop: '0.3rem',
-                      fontWeight: 300,
+                      fontWeight: 400,
                     }}
                   >
                     {project.category}
@@ -281,7 +283,7 @@ export default function Collections() {
                         style={{
                           aspectRatio: '16/10',
                           background:
-                            'linear-gradient(135deg, #0A0A0A 0%, #111111 50%, #0D0D0D 100%)',
+                            'linear-gradient(135deg, #1a1a1a 0%, #222222 50%, #1c1c1c 100%)',
                           border: '0.5px solid rgba(255,255,255,0.06)',
                           display: 'flex',
                           alignItems: 'center',
@@ -315,8 +317,8 @@ export default function Collections() {
                             fontFamily: "'Inter', sans-serif",
                             fontSize: 'clamp(0.8rem, 1.1vw, 0.88rem)',
                             lineHeight: 1.9,
-                            color: '#999999',
-                            fontWeight: 300,
+                            color: '#CCCCCC',
+                            fontWeight: 400,
                           }}
                         >
                           {project.description}
@@ -340,7 +342,7 @@ export default function Collections() {
                                 textTransform: 'uppercase',
                                 padding: '0.35rem 0.7rem',
                                 border: '0.5px solid rgba(255,255,255,0.1)',
-                                color: '#666666',
+                                color: '#B0B0B0',
                                 fontWeight: 400,
                                 transition: 'all 0.3s ease',
                               }}
@@ -352,7 +354,7 @@ export default function Collections() {
                               onMouseLeave={(e) => {
                                 (e.target as HTMLElement).style.borderColor =
                                   'rgba(255,255,255,0.1)';
-                                (e.target as HTMLElement).style.color = '#666666';
+                                (e.target as HTMLElement).style.color = '#B0B0B0';
                               }}
                             >
                               {tag}

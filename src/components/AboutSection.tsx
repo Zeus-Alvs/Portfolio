@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
+import { useStore } from '@nanostores/react';
+import { currentLang } from '../store/i18n';
+import { dict } from '../i18n/dict';
 
 export default function AboutSection() {
+  const lang = useStore(currentLang);
+  const t = dict[lang].about;
+
   return (
     <section id="about" className="section-padding">
       <div className="container-editorial">
@@ -16,13 +22,13 @@ export default function AboutSection() {
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
-              color: '#555555',
+              color: '#A0A0A0',
               textTransform: 'uppercase',
               marginBottom: '2rem',
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
-            001 — ABOUT
+            {t.label}
           </p>
 
           {/* Main text — editorial layout */}
@@ -46,12 +52,12 @@ export default function AboutSection() {
                   letterSpacing: '0.04em',
                 }}
               >
-                Engenharia
+                {t.title1}
                 <br />
-                de software
+                {t.title2}
                 <br />
                 <span style={{ fontStyle: 'italic', color: '#C9A96E' }}>
-                  do hardware ao código.
+                  {t.title3}
                 </span>
               </h2>
             </div>
@@ -76,30 +82,24 @@ export default function AboutSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 'clamp(0.8rem, 1.1vw, 0.9rem)',
                   lineHeight: 1.9,
-                  color: '#999999',
-                  fontWeight: 300,
+                  color: '#CCCCCC',
+                  fontWeight: 400,
                   maxWidth: '480px',
                 }}
               >
-                Estudante de Desenvolvimento de Software na FATEC, com base
-                técnica formada pela ETEC em infraestrutura, suporte e hardware.
-                Atualmente, foco minha evolução na construção de sistemas que
-                unem lógica de back-end eficiente a interfaces intuitivas.
+                {t.p1}
               </p>
               <p
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 'clamp(0.8rem, 1.1vw, 0.9rem)',
                   lineHeight: 1.9,
-                  color: '#999999',
-                  fontWeight: 300,
+                  color: '#CCCCCC',
+                  fontWeight: 400,
                   maxWidth: '480px',
                 }}
               >
-                Minha trajetória transita entre o desenvolvimento de
-                sistemas embarcados e a arquitetura web moderna, sempre
-                buscando o equilíbrio entre a precisão técnica e a utilidade
-                prática do software.
+                {t.p2}
               </p>
 
               {/* Stats — minimal */}
@@ -113,9 +113,9 @@ export default function AboutSection() {
                 }}
               >
                 {[
-                  { value: '3+', label: 'PROJECTS' },
-                  { value: 'FATEC', label: 'SOFTWARE DEV' },
-                  { value: 'ETEC', label: 'EMBEDDED SYSTEMS' },
+                  { value: '3+', label: t.stats.projects },
+                  { value: 'FATEC', label: t.stats.software },
+                  { value: 'ETEC', label: t.stats.embedded },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <p
@@ -135,9 +135,9 @@ export default function AboutSection() {
                         fontFamily: "'Inter', sans-serif",
                         fontSize: '0.5rem',
                         letterSpacing: '0.2em',
-                        color: '#555555',
+                        color: '#A0A0A0',
                         textTransform: 'uppercase',
-                        fontWeight: 300,
+                        fontWeight: 400,
                       }}
                     >
                       {stat.label}
