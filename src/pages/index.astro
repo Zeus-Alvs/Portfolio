@@ -8,6 +8,122 @@ import Atelier from '../components/Atelier';
 import GitHubSection from '../components/GitHubSection';
 import Timeline from '../components/Timeline';
 import Footer from '../components/Footer';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+// Fetch GitHub Repositories at build time
+const GITHUB_USERNAME = 'Zeus-Alvs';
+let formattedRepos: any[] = [];
+const cacheFile = path.join(process.cwd(), '.github-cache.json');
+
+async function translateToEnglish(text: string | null): Promise<string> {
+  if (!text) return '';
+  try {
+    const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+    if (res.ok) {
+      const json = await res.json();
+      return json[0].map((item: any) => item[0]).join('');
+    }
+  } catch (e) {
+    console.error('Translation error:', e);
+  }
+  return text; // fallback to original
+}
+
+async function getGithubOpenGraphImage(repoUrl: string) {
+  try {
+    const htmlResponse = await fetch(repoUrl);
+    if (htmlResponse.ok) {
+      const html = await htmlResponse.text();
+      const match = html.match(/<meta property="og:image" content="([^"]+)"/);
+      if (match && match[1]) {
+        return match[1];
+      }
+    }
+  } catch(e) {}
+  return null;
+}
+
+try {
+  let useCache = false;
+  try {
+    const stats = await fs.stat(cacheFile);
+    // Use cache if it's less than 2 hours old
+    if (Date.now() - stats.mtimeMs < 2 * 60 * 60 * 1000) {
+      useCache = true;
+    }
+  } catch (e) {
+    // Cache file does not exist
+  }
+
+  if (useCache) {
+    const cachedData = await fs.readFile(cacheFile, 'utf-8');
+    formattedRepos = JSON.parse(cachedData);
+  } else {
+    // Configura os headers de autenticação se o token existir
+    const githubToken = import.meta.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN;
+    const fetchOptions = githubToken ? {
+      headers: {
+        Authorization: `token ${githubToken}`
+      }
+    } : {};
+
+    const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`, fetchOptions);
+    if (response.ok) {
+      const repos = await response.json();
+      
+      const filteredRepos = repos
+        .filter((repo: any) => !repo.name.endsWith('-X'))
+        .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
+
+      formattedRepos = await Promise.all(
+        filteredRepos.map(async (repo: any) => {
+          const homepage = repo.homepage && repo.homepage.trim() !== "" ? repo.homepage : null;
+          
+          let githubOgImage = await getGithubOpenGraphImage(repo.html_url);
+          if (!githubOgImage) {
+             githubOgImage = `https://opengraph.githubassets.com/${Date.now()}/${GITHUB_USERNAME}/${repo.name}`;
+          }
+
+          let isCustomOgImage = githubOgImage.includes('repository-images.githubusercontent.com');
+
+          let languages: string[] = [];
+          try {
+            const langResponse = await fetch(repo.languages_url, fetchOptions);
+            if (langResponse.ok) {
+              const langData = await langResponse.json();
+              languages = Object.keys(langData);
+            }
+          } catch(e) {}
+
+          const combinedTopics = Array.from(new Set([...(repo.topics || []), ...languages]));
+          
+          const rawDescription = repo.description || '';
+          const descriptionEn = await translateToEnglish(rawDescription);
+
+          return {
+            title: repo.name.replace(/-/g, ' '),
+            description: rawDescription,
+            descriptionEn: descriptionEn,
+            topics: combinedTopics,
+            html_url: repo.html_url,
+            homepage: homepage,
+            coverImage: isCustomOgImage
+              ? githubOgImage
+              : (homepage 
+                  ? `https://api.microlink.io/?url=${encodeURIComponent(homepage)}&screenshot=true&meta=false&embed=screenshot.url`
+                  : githubOgImage)
+          };
+        })
+      );
+      
+      // Save to cache
+      await fs.writeFile(cacheFile, JSON.stringify(formattedRepos, null, 2));
+    }
+  }
+} catch (error) {
+  console.error("Error fetching GitHub repos:", error);
+}
 ---
 
 <Layout>
@@ -15,7 +131,7 @@ import Footer from '../components/Footer';
   <div id="page-content" style={{ transition: 'opacity 0.4s ease' }}>
     <HeroSection client:load />
     <AboutSection client:visible />
-    <Collections client:visible />
+    <Collections repos={formattedRepos} client:visible />
     <Atelier client:visible />
     <GitHubSection client:visible />
     <Timeline client:visible />

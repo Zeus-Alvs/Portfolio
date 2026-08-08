@@ -125,7 +125,7 @@ export default function HeroSection() {
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 15 }}
           transition={{ duration: 1, delay: 1.8, ease: [0.25, 0.1, 0.25, 1] }}
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Calibri Light', Calibri, sans-serif",
             fontSize: 'clamp(0.6rem, 1vw, 0.75rem)',
             letterSpacing: '0.35em',
             color: '#CCCCCC',
@@ -141,9 +141,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <motion.div
         className="hero-scroll-indicator"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isLoaded ? 1 : 0 }}
-        transition={{ delay: 2.8, duration: 1 }}
+        transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
         style={{
           position: 'absolute',
           bottom: '2.5rem',
@@ -156,7 +154,7 @@ export default function HeroSection() {
       >
         <span
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Calibri Light', Calibri, sans-serif",
             fontSize: '0.5rem',
             letterSpacing: '0.4em',
             color: '#888888',
@@ -182,7 +180,7 @@ export default function HeroSection() {
           position: 'absolute',
           top: 'clamp(1.5rem, 4vw, 3rem)',
           right: 'clamp(1.5rem, 4vw, 3rem)',
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Calibri Light', Calibri, sans-serif",
           fontSize: '0.5rem',
           color: '#888888',
           letterSpacing: '0.3em',

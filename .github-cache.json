@@ -1,0 +1,151 @@
+[
+  {
+    "title": "Aethesa",
+    "description": "Projeto efetuado a pedido e em colaboração de estudantes da universidade Belas Artes. \"Aethesa busca suprir a necessidade de mudança do mercado, almejando inovação e criatividade para moda urbana, utilizando tecnologias que ajustam ao corpo e reduzem a produção de resíduos têxteis, assim respeitando a sustentabilidade em conjunto do conforto.\"",
+    "descriptionEn": "Project carried out at the request and in collaboration of students from Belas Artes University. \"Aethesa seeks to meet the need for change in the market, aiming for innovation and creativity for urban fashion, using technologies that adjust to the body and reduce the production of textile waste, thus respecting sustainability together with comfort.\"",
+    "topics": [
+      "PHP",
+      "CSS",
+      "Blade",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Aethesa",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1115484219/9227d466-339e-4d36-b0f3-979553d51c4c"
+  },
+  {
+    "title": "Cosmic Mind",
+    "description": "Painel web e API (Next.js, FastAPI, MongoDB) de monitoramento cognitivo para crianças com TDAH. Recebe métricas do jogo da Equipe Spectrum para análise médica. Projeto integrador desenvolvido como requisito parcial do terceiro semestre do curso de Desenvolvimento de Sistemas Multiplataformas na FATEC.",
+    "descriptionEn": "Web panel and API (Next.js, FastAPI, MongoDB) for cognitive monitoring for children with ADHD. Receives game metrics from the Spectrum Team for medical analysis. Integrative project developed as a partial requirement of the third semester of the Multiplatform Systems Development course at FATEC.",
+    "topics": [
+      "TypeScript",
+      "Python",
+      "CSS",
+      "JavaScript",
+      "Dockerfile"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Cosmic-Mind",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1210967411/8dedc171-d527-400f-8fa4-273c4eb21586"
+  },
+  {
+    "title": "Relay",
+    "description": "Relay é um orquestrador descentralizado em Python que elimina a necessidade de hospedagem paga para servidores. O sistema cria uma \"Mente Coletiva\" onde os próprios usuários se revezam como host de forma automática. Quando o jogador ativo sai, o progresso é sincronizado na nuvem e o \"bastão\" é passado para o próximo da fila de espera.",
+    "descriptionEn": "Relay is a decentralized orchestrator in Python that eliminates the need for paid server hosting. The system creates a \"Collective Mind\" where users themselves automatically take turns as hosts. When the active player leaves, progress is synced to the cloud and the \"baton\" is passed to the next person in line.",
+    "topics": [
+      "Python",
+      "CSS",
+      "JavaScript",
+      "Inno Setup"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Relay",
+    "homepage": "https://relay-orchestrator.vercel.app/",
+    "coverImage": "https://api.microlink.io/?url=https%3A%2F%2Frelay-orchestrator.vercel.app%2F&screenshot=true&meta=false&embed=screenshot.url"
+  },
+  {
+    "title": "Alloy",
+    "description": "(WIP/Lab) Alloy: Ecossistema fitness multiplataforma construído via AI-Assisted Development (Vibecoding). O foco é a orquestração arquitetural e integração, não o código manual. Stack: Next.js (Web), React Native (Mobile), Python (Microsserviço) e Firebase. Habilidades: Prototipação Rápida, Prompt Engineering e Integração.",
+    "descriptionEn": "(WIP/Lab) Alloy: Multiplatform fitness ecosystem built via AI-Assisted Development (Vibecoding). The focus is on architectural orchestration and integration, not manual coding. Stack: Next.js (Web), React Native (Mobile), Python (Microservice) and Firebase. Skills: Rapid Prototyping, Prompt Engineering and Integration.",
+    "topics": [
+      "TypeScript",
+      "CMake",
+      "C",
+      "C++",
+      "Python",
+      "CSS",
+      "PowerShell",
+      "JavaScript",
+      "Kotlin",
+      "Ruby",
+      "Swift"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Alloy",
+    "homepage": null,
+    "coverImage": "https://opengraph.githubassets.com/1f9fa7b96cd9aece7dee5cb643396f33bf94cc21b63019d3dbe768b9fbddb7ed/Zeus-Alvs/Alloy"
+  },
+  {
+    "title": "Aurora Boutique",
+    "description": "E-commerce com arquitetura poliglota criado para a disciplina de Desenvolvimento Web III (FATEC - Desenvolvimento de Software Multiplataforma). Construído com Django, SQLite e Firestore, combinando ingestão de dados automatizada via API externa com um sistema CRUD completo para gestão de estoque, vendas e autenticação.",
+    "descriptionEn": "E-commerce with polyglot architecture created for the Web Development III discipline (FATEC - Multiplatform Software Development). Built with Django, SQLite and Firestore, combining automated data ingestion via external API with a complete CRUD system for inventory management, sales and authentication.",
+    "topics": [
+      "HTML",
+      "CSS",
+      "Python"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Aurora-Boutique",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1251910949/587016d4-1a0c-468d-8e20-0c5330e635e2"
+  },
+  {
+    "title": "Elegance PH",
+    "description": "Projeto efetuado na Fatec Praia Grande, referente a criação da pagina \"Elegance PH\".",
+    "descriptionEn": "Project carried out at Fatec Praia Grande, regarding the creation of the \"Elegance PH\" page.",
+    "topics": [
+      "PHP",
+      "CSS",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Elegance-PH",
+    "homepage": "https://zeus-alvs.github.io/Elegance-PH/",
+    "coverImage": "https://repository-images.githubusercontent.com/1091216559/8311b191-c847-4377-87ef-940663ebe1b8"
+  },
+  {
+    "title": "FleetSync",
+    "description": "Motor inteligente de matchmaking logístico por score (proximidade e urgência). API em Java Spring Boot + Postgres e Front em React. Simulação na Baixada Santista. Projeto desenvolvido como requisito parcial da matéria de Técnicas de Programação 2 do curso de Desenvolvimento de Software Multiplataforma na FATEC.",
+    "descriptionEn": "Intelligent logistics matchmaking engine based on score (proximity and urgency). API in Java Spring Boot + Postgres and Front in React. Simulation in Baixada Santista. Project developed as a partial requirement for Programming Techniques 2 of the Multiplatform Software Development course at FATEC.",
+    "topics": [
+      "JavaScript",
+      "Java",
+      "CSS",
+      "HTML",
+      "Batchfile"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/FleetSync",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1243942895/b26c68ca-8069-469b-a087-5d1bdbeb6e20"
+  },
+  {
+    "title": "Portfolio",
+    "description": "Portfólio Pessoal focado em Back-End, Infraestrutura e Embarcados (estética Dark Luxury). Desenvolvido com Astro 6, React 19, TS e Tailwind v4. Traz animações com Framer Motion, fundo interativo em Canvas 2D (física magnética) e i18n reativo via Nanostores. Deploy automatizado via CI/CD com GitHub Actions no Pages.",
+    "descriptionEn": "Personal Portfolio focused on Back-End, Infrastructure and Embedded (Dark Luxury aesthetic). Developed with Astro 6, React 19, TS and Tailwind v4. It features animations with Framer Motion, interactive background in 2D Canvas (magnetic physics) and reactive i18n via Nanostores. Automated deployment via CI/CD with GitHub Actions in Pages.",
+    "topics": [
+      "TypeScript",
+      "Astro",
+      "CSS",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Portfolio",
+    "homepage": "https://zeus-alvs.github.io/Portfolio/",
+    "coverImage": "https://api.microlink.io/?url=https%3A%2F%2Fzeus-alvs.github.io%2FPortfolio%2F&screenshot=true&meta=false&embed=screenshot.url"
+  },
+  {
+    "title": "StudIA",
+    "description": "(WIP/Lab) StudIA: Copiloto de estudos desktop construído via AI Prompting. Mascote que analisa foco (câmera) e contexto (tela/áudio) para atuar como tutor. Foco em orquestração sistêmica. Stack: Tauri (Rust/React), Python (OpenCV/MediaPipe) e WebSockets. IA: Integração com Google Gemini e ChromaDB (memória contextual).",
+    "descriptionEn": "(WIP/Lab) StudIA: Desktop study copilot built via AI Prompting. Mascot that analyzes focus (camera) and context (screen/audio) to act as a tutor. Focus on systemic orchestration. Stack: Tauri (Rust/React), Python (OpenCV/MediaPipe) and WebSockets. AI: Integration with Google Gemini and ChromaDB (contextual memory).",
+    "topics": [
+      "Python",
+      "TypeScript",
+      "CSS",
+      "Rust",
+      "HTML",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/StudIA",
+    "homepage": null,
+    "coverImage": "https://opengraph.githubassets.com/434c8824b7260a638e7324b58718e8c62cc5751c091e6febe826e82ff23e46f9/Zeus-Alvs/StudIA"
+  },
+  {
+    "title": "TechLens",
+    "description": "Plataforma de telemetria de hardware real-time criada para a matéria de Banco de Dados Não Relacional (FATEC - Desenvolvimento de Sistemas Multiplataformas). Usa FastAPI, Redis e Next.js com um motor de simulação por ondas de estresse, isolando as especificações de fábrica dos dados dinâmicos dos sensores em tempo real.",
+    "descriptionEn": "Real-time hardware telemetry platform created for Non-Relational Databases (FATEC - Multiplatform Systems Development). Uses FastAPI, Redis and Next.js with a stress wave simulation engine, isolating factory specifications from dynamic real-time sensor data.",
+    "topics": [
+      "TypeScript",
+      "Python",
+      "JavaScript",
+      "CSS"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/TechLens",
+    "homepage": null,
+    "coverImage": "https://opengraph.githubassets.com/ccaf3550b5ece7dc2f5f1f3c35651123f84b0f9ff85a7e97a7fdda9e322190fb/Zeus-Alvs/TechLens"
+  }
+]

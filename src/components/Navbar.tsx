@@ -168,19 +168,8 @@ export default function Navbar() {
             <motion.span
               className="zeus-letter"
               key={i}
-              initial={{ opacity: 0, y: 80, rotateX: -90 }}
-              animate={{
-                opacity: isLoaded ? 1 : 0,
-                y: isLoaded ? 0 : 80,
-                rotateX: isLoaded ? 0 : -90,
-              }}
-              transition={{
-                duration: 1.1,
-                delay: 0.5 + i * 0.15,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
               style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Cormorant Garamond', serif",
                 fontSize: 'clamp(6rem, 22vw, 18rem)',
                 fontWeight: 400,
                 color: '#FFFFFF',
@@ -288,7 +277,7 @@ export default function Navbar() {
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 'clamp(0.72rem, 2.64vw, 2.16rem)',
                   color: '#FFFFFF',
                   textDecoration: 'none',
@@ -328,7 +317,7 @@ export default function Navbar() {
               }}
             >
               <span style={{
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Calibri Light', Calibri, sans-serif",
                 fontSize: '0.6rem',
                 color: '#555',
                 letterSpacing: '0.25em',
@@ -337,7 +326,7 @@ export default function Navbar() {
                 {t.footer}
               </span>
               <span style={{
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Calibri Light', Calibri, sans-serif",
                 fontSize: '0.6rem',
                 color: '#555',
                 letterSpacing: '0.25em',

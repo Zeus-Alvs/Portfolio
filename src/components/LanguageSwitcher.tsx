@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
         border: '0.5px solid rgba(255,255,255,0.2)',
         borderRadius: '2px',
         color: '#FFFFFF',
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Calibri Light', Calibri, sans-serif",
         letterSpacing: '0.1em',
         cursor: 'pointer',
         background: 'transparent',

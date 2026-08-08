@@ -60,15 +60,12 @@ export default function Timeline() {
       <div className="container-editorial">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           style={{ marginBottom: 'clamp(3rem, 6vw, 5rem)' }}
         >
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
               color: '#A0A0A0',
@@ -81,7 +78,7 @@ export default function Timeline() {
           </p>
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Cormorant Garamond', serif",
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 400,
               letterSpacing: '0.08em',
@@ -127,9 +124,6 @@ export default function Timeline() {
             {entries.map((entry, i) => (
               <motion.div
                 key={entry.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
                 transition={{
                   duration: 0.6,
                   delay: i * 0.12,
@@ -180,7 +174,7 @@ export default function Timeline() {
                   >
                     <span
                       style={{
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Calibri Light', Calibri, sans-serif",
                         fontSize: '0.55rem',
                         letterSpacing: '0.25em',
                         color: '#A0A0A0',
@@ -192,7 +186,7 @@ export default function Timeline() {
                     </span>
                     <span
                       style={{
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Calibri Light', Calibri, sans-serif",
                         fontSize: '0.5rem',
                         letterSpacing: '0.2em',
                         color:
@@ -215,7 +209,7 @@ export default function Timeline() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: "'Playfair Display', serif",
+                      fontFamily: "'Cormorant Garamond', serif",
                       fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
                       fontWeight: 400,
                       letterSpacing: '0.05em',
@@ -227,7 +221,7 @@ export default function Timeline() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "'Inter', sans-serif",
+                      fontFamily: "'Calibri Light', Calibri, sans-serif",
                       fontSize: '0.6rem',
                       letterSpacing: '0.2em',
                       color: '#B0B0B0',
@@ -240,7 +234,7 @@ export default function Timeline() {
                   </p>
                   <p
                     style={{
-                      fontFamily: "'Inter', sans-serif",
+                      fontFamily: "'Calibri Light', Calibri, sans-serif",
                       fontSize: 'clamp(0.75rem, 1vw, 0.85rem)',
                       lineHeight: 1.8,
                       color: '#CCCCCC',

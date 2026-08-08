@@ -11,15 +11,12 @@ export default function AboutSection() {
     <section id="about" className="section-padding">
       <div className="container-editorial">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
           {/* Label */}
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
               color: '#A0A0A0',
@@ -44,7 +41,7 @@ export default function AboutSection() {
             <div>
               <h2
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 'clamp(1.8rem, 4vw, 3rem)',
                   fontWeight: 400,
                   lineHeight: 1.15,
@@ -79,7 +76,7 @@ export default function AboutSection() {
               />
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: 'clamp(0.8rem, 1.1vw, 0.9rem)',
                   lineHeight: 1.9,
                   color: '#CCCCCC',
@@ -91,7 +88,7 @@ export default function AboutSection() {
               </p>
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: 'clamp(0.8rem, 1.1vw, 0.9rem)',
                   lineHeight: 1.9,
                   color: '#CCCCCC',
@@ -120,7 +117,7 @@ export default function AboutSection() {
                   <div key={stat.label}>
                     <p
                       style={{
-                        fontFamily: "'Playfair Display', serif",
+                        fontFamily: "'Cormorant Garamond', serif",
                         fontSize: '1.4rem',
                         color: '#FFFFFF',
                         fontWeight: 400,
@@ -132,7 +129,7 @@ export default function AboutSection() {
                     </p>
                     <p
                       style={{
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Calibri Light', Calibri, sans-serif",
                         fontSize: '0.5rem',
                         letterSpacing: '0.2em',
                         color: '#A0A0A0',

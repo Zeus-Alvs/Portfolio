@@ -10,10 +10,10 @@ const getInitialLanguage = (): Language => {
     
     // Auto-detect from browser
     const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('pt')) return 'pt';
-    return 'en';
+    if (browserLang.startsWith('en')) return 'en';
+    return 'pt'; // default fallback for client
   }
-  return 'en'; // default for SSR
+  return 'pt'; // default for SSR
 };
 
 export const currentLang = atom<Language>(getInitialLanguage());

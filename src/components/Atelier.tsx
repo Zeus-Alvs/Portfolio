@@ -51,15 +51,12 @@ export default function Atelier() {
       <div className="container-editorial">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           style={{ marginBottom: 'clamp(3rem, 6vw, 5rem)' }}
         >
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
               color: '#A0A0A0',
@@ -72,7 +69,7 @@ export default function Atelier() {
           </p>
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Cormorant Garamond', serif",
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 400,
               letterSpacing: '0.08em',
@@ -105,9 +102,6 @@ export default function Atelier() {
           {categories.map((cat, catIndex) => (
             <motion.div
               key={cat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
               transition={{
                 duration: 0.6,
                 delay: catIndex * 0.1,
@@ -117,7 +111,7 @@ export default function Atelier() {
               {/* Category Label */}
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: '0.55rem',
                   letterSpacing: '0.35em',
                   color: '#A0A0A0',
@@ -132,9 +126,6 @@ export default function Atelier() {
               {/* Items Grid */}
               <motion.div
                 variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 style={{
                   display: 'grid',
                   gridTemplateColumns:
@@ -192,7 +183,7 @@ export default function Atelier() {
                     <span
                       className="tech-label"
                       style={{
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Calibri Light', Calibri, sans-serif",
                         fontSize: 'clamp(0.7rem, 1vw, 0.8rem)',
                         letterSpacing: '0.1em',
                         color: '#CCCCCC',

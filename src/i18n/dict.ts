@@ -76,7 +76,7 @@ export const dict = {
       }
     },
     timeline: {
-      label: '005 — TIMELINE',
+      label: '005 — LINHA DO TEMPO',
       title1: 'Experiência',
       title2: '& Formação',
       types: {

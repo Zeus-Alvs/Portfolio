@@ -28,14 +28,11 @@ export default function GitHubSection() {
       <div className="container-editorial">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.6rem',
               letterSpacing: '0.4em',
               color: '#A0A0A0',
@@ -48,7 +45,7 @@ export default function GitHubSection() {
           </p>
           <h2
             style={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Cormorant Garamond', serif",
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 400,
               letterSpacing: '0.08em',
@@ -160,7 +157,7 @@ export default function GitHubSection() {
                 >
                   <span
                     style={{
-                      fontFamily: "'Playfair Display', serif",
+                      fontFamily: "'Cormorant Garamond', serif",
                       fontSize: 'clamp(3rem, 5vw, 4.5rem)',
                       color: 'rgba(255,255,255,0.06)',
                       fontWeight: 400,
@@ -190,7 +187,7 @@ export default function GitHubSection() {
             <div>
               <h3
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Cormorant Garamond', serif",
                   fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
                   fontWeight: 400,
                   color: '#FFFFFF',
@@ -203,7 +200,7 @@ export default function GitHubSection() {
               </h3>
               <span
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: 'clamp(0.6rem, 1vw, 0.72rem)',
                   letterSpacing: '0.15em',
                   color: '#C9A96E',
@@ -216,7 +213,7 @@ export default function GitHubSection() {
               </span>
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: 'clamp(0.65rem, 1vw, 0.78rem)',
                   color: '#CCCCCC',
                   fontWeight: 400,
@@ -244,7 +241,7 @@ export default function GitHubSection() {
               {/* Subliminal Tech Stack */}
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: 'clamp(0.48rem, 0.7vw, 0.58rem)',
                   letterSpacing: '0.3em',
                   color: 'rgba(255, 255, 255, 0.25)',
@@ -270,7 +267,7 @@ export default function GitHubSection() {
                     border: '0.5px solid rgba(255, 255, 255, 0.15)',
                     color: '#FFFFFF',
                     background: 'transparent',
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'Calibri Light', Calibri, sans-serif",
                     fontSize: '0.55rem',
                     letterSpacing: '0.25em',
                     textTransform: 'uppercase' as const,
@@ -371,7 +368,7 @@ export default function GitHubSection() {
             >
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: '0.5rem',
                   letterSpacing: '0.25em',
                   color: '#888888',
@@ -384,7 +381,7 @@ export default function GitHubSection() {
               </p>
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Calibri Light', Calibri, sans-serif",
                   fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
                   letterSpacing: '0.1em',
                   color: '#CCCCCC',

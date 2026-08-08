@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Label */}
         <p
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Calibri Light', Calibri, sans-serif",
             fontSize: '0.6rem',
             letterSpacing: '0.4em',
             color: '#A0A0A0',
@@ -60,7 +60,7 @@ export default function Footer() {
         {/* Title */}
         <h2
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Cormorant Garamond', serif",
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             fontWeight: 400,
             letterSpacing: '0.12em',
@@ -75,7 +75,7 @@ export default function Footer() {
         {/* Subtitle */}
         <p
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Calibri Light', Calibri, sans-serif",
             fontSize: '0.65rem',
             letterSpacing: '0.25em',
             color: '#A0A0A0',
@@ -134,7 +134,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="social-link"
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.55rem',
               letterSpacing: '0.2em',
               color: '#888888',
@@ -154,7 +154,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="social-link"
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.55rem',
               letterSpacing: '0.2em',
               color: '#888888',
@@ -181,7 +181,7 @@ export default function Footer() {
         >
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.5rem',
               letterSpacing: '0.2em',
               color: '#888888',
@@ -194,7 +194,7 @@ export default function Footer() {
 
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Calibri Light', Calibri, sans-serif",
               fontSize: '0.5rem',
               letterSpacing: '0.2em',
               color: '#888888',
