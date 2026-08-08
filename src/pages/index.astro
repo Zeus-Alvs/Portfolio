@@ -73,7 +73,7 @@ try {
       const repos = await response.json();
       
       const filteredRepos = repos
-        .filter((repo: any) => !repo.name.endsWith('-X'))
+        .filter((repo: any) => !repo.name.endsWith('-X') && repo.description && repo.description.trim() !== '')
         .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
 
       formattedRepos = await Promise.all(
