@@ -24,7 +24,7 @@ export const dict = {
       stats: {
         projects: 'PROJETOS',
         software: 'DESENV. DE SOFTWARE',
-        embedded: 'SISTEMAS EMBARCADOS',
+        embedded: 'SUPORTE DE TI',
       }
     },
     collections: {
@@ -138,7 +138,7 @@ export const dict = {
       stats: {
         projects: 'PROJECTS',
         software: 'SOFTWARE DEV',
-        embedded: 'EMBEDDED SYSTEMS',
+        embedded: 'IT SUPPORT',
       }
     },
     collections: {
