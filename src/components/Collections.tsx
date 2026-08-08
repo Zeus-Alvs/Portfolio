@@ -66,18 +66,19 @@ export default function Collections({ repos = [] }: Props) {
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'flex-end',
-              flexWrap: 'wrap',
+              flexWrap: 'nowrap',
               gap: '1rem',
             }}
           >
             <h2
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                fontSize: 'clamp(1.8rem, 5vw, 3.5rem)',
                 fontWeight: 400,
                 letterSpacing: '0.08em',
                 color: '#FFFFFF',
                 lineHeight: 1.1,
+                flexShrink: 0,
               }}
             >
               {t.title1}
@@ -87,11 +88,11 @@ export default function Collections({ repos = [] }: Props) {
             <p
               style={{
                 fontFamily: "'Calibri Light', Calibri, sans-serif",
-                fontSize: '0.6rem',
+                fontSize: 'clamp(0.45rem, 2vw, 0.6rem)',
                 letterSpacing: '0.2em',
                 color: '#A0A0A0',
                 fontWeight: 400,
-                maxWidth: '250px',
+                maxWidth: 'clamp(140px, 40vw, 250px)',
                 textAlign: 'right',
               }}
             >

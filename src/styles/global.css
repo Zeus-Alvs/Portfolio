@@ -126,13 +126,15 @@ button {
   z-index: 0;
 }
 
-.btn-outline:hover::before {
-  transform: scaleX(1);
-}
+@media (hover: hover) {
+  .btn-outline:hover::before {
+    transform: scaleX(1);
+  }
 
-.btn-outline:hover {
-  color: var(--color-bg);
-  border-color: var(--color-text);
+  .btn-outline:hover {
+    color: var(--color-bg);
+    border-color: var(--color-text);
+  }
 }
 
 .btn-outline span,
