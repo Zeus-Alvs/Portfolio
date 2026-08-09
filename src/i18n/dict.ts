@@ -21,11 +21,10 @@ export const dict = {
       title3: 'do hardware ao código.',
       p1: 'Estudante de Desenvolvimento de Software na FATEC, com base técnica formada pela ETEC em infraestrutura, suporte e hardware. Atualmente, foco minha evolução na construção de sistemas que unem lógica de back-end eficiente a interfaces intuitivas.',
       p2: 'Minha trajetória transita entre o desenvolvimento de sistemas embarcados e a arquitetura web moderna, sempre buscando o equilíbrio entre a precisão técnica e a utilidade prática do software.',
-      stats: {
-        projects: 'PROJETOS',
-        software: 'DESENV. DE SOFTWARE',
-        embedded: 'SUPORTE DE TI',
-      }
+      roleLabel: 'CARGO',
+      roleValue: 'DEV. FULL-STACK',
+      locationLabel: 'LOCALIZAÇÃO',
+      locationValue: 'PRAIA GRANDE - SP',
     },
     collections: {
       label: '002 — AS COLEÇÕES',
@@ -135,11 +134,10 @@ export const dict = {
       title3: 'from hardware to code.',
       p1: 'Software Development student at FATEC, with a technical foundation from ETEC in infrastructure, support, and hardware. Currently, I focus on building systems that bridge efficient back-end logic with intuitive interfaces.',
       p2: 'My journey transitions between embedded systems development and modern web architecture, always seeking the balance between technical precision and practical software utility.',
-      stats: {
-        projects: 'PROJECTS',
-        software: 'SOFTWARE DEV',
-        embedded: 'IT SUPPORT',
-      }
+      roleLabel: 'ROLE',
+      roleValue: 'FULL-STACK DEV.',
+      locationLabel: 'LOCATION',
+      locationValue: 'PRAIA GRANDE - SP',
     },
     collections: {
       label: '002 — THE COLLECTIONS',
