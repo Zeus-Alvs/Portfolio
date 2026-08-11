@@ -355,7 +355,7 @@ export default function GitHubSection() {
           {[
             { label: t.stats.reposLabel, value: t.stats.reposValue },
             { label: t.stats.focusLabel, value: t.stats.focusValue },
-            { label: t.stats.stackLabel, value: 'PHP · JAVA · C++ · SQL · C# · JS · Python · TS' },
+            { label: t.stats.stackLabel, value: 'PHP · Java · C++ · SQL · C# · JavaScript · Python · TypeScript' },
           ].map((stat, i) => (
             <div
               key={stat.label}

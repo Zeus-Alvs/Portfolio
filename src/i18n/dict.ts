@@ -16,18 +16,16 @@ export const dict = {
     },
     about: {
       label: '001 — SOBRE',
-      title1: 'Engenharia',
-      title2: 'de software',
-      title3: 'do hardware ao código.',
-      p1: 'Estudante de Desenvolvimento de Software na FATEC, com base técnica formada pela ETEC em infraestrutura, suporte e hardware. Atualmente, foco minha evolução na construção de sistemas que unem lógica de back-end eficiente a interfaces intuitivas.',
-      p2: 'Minha trajetória transita entre o desenvolvimento de sistemas embarcados e a arquitetura web moderna, sempre buscando o equilíbrio entre a precisão técnica e a utilidade prática do software.',
-      roleLabel: 'CARGO',
-      roleValue: 'DEV. FULL-STACK',
+      title: 'Engenharia e Arquitetura de Software',
+      p1: 'Minha trajetória na tecnologia começou na infraestrutura (ETEC), forjando uma base sólida em redes, hardware e servidores. Hoje, graduando em Desenvolvimento de Software Multiplataforma (FATEC), utilizo essa visão crítica para desenhar ecossistemas completos.',
+      p2: 'Mais do que apenas escrever código, foco em orquestrar soluções escaláveis de ponta a ponta, da arquitetura do banco de dados e APIs em Python/Java até a interface final do usuário. Meu objetivo é sempre equilibrar precisão técnica de back-end com excelência em usabilidade.',
+      roleLabel: 'ATUAÇÃO',
+      roleValue: 'Engenharia de Software • Infraestrutura • Full-Stack',
       locationLabel: 'LOCALIZAÇÃO',
-      locationValue: 'PRAIA GRANDE - SP',
+      locationValue: 'Praia Grande - SP, Brasil',
     },
     collections: {
-      label: '002 — AS COLEÇÕES',
+      label: '003 — AS COLEÇÕES',
       title1: 'Trabalhos',
       title2: 'Selecionados',
       subtitle: 'PROJETOS SELECIONADOS DEMONSTRANDO ALCANCE TÉCNICO E VISÃO CRIATIVA',
@@ -49,18 +47,34 @@ export const dict = {
       }
     },
     atelier: {
-      label: '003 — O ATELIÊ',
+      label: '002 — O ATELIÊ',
       title1: 'Stack',
       title2: 'Técnica',
-      categories: {
-        lang: 'LINGUAGENS',
-        frameworks: 'FRAMEWORKS E FERRAMENTAS',
-        hardware: 'HARDWARE'
-      },
-      hardwareItems: ['Manutenção de Hardware', 'Redes', 'Sistemas embarcados']
+      categories: [
+        {
+          label: 'FRONT-END & UI',
+          items: ['TypeScript', 'JavaScript', 'Next.js', 'React', 'Tailwind CSS']
+        },
+        {
+          label: 'BACK-END & APIs',
+          items: ['Java (Spring Boot)', 'Python (FastAPI, Django)', 'PHP (Laravel)', 'C++', 'C#']
+        },
+        {
+          label: 'BANCO DE DADOS',
+          items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Firebase', 'Oracle']
+        },
+        {
+          label: 'INFRAESTRUTURA, DEVOPS & REDES',
+          items: ['Docker', 'Linux', 'Google Cloud & VPS', 'WireGuard (VPN)', 'Nginx & Gateways']
+        },
+        {
+          label: 'HARDWARE & AUTOMAÇÃO',
+          items: ['n8n (Automação)', 'Sistemas Embarcados', 'Arquitetura de Hardware', 'Git / GitHub']
+        }
+      ]
     },
     github: {
-      label: '004 — GITHUB',
+      label: '005 — GITHUB',
       title1: 'Código',
       title2: 'Aberto',
       desc: 'Engenharia Full-Stack & Sistemas Embarcados | FATEC & ETEC.',
@@ -70,12 +84,12 @@ export const dict = {
         reposLabel: 'REPOSITÓRIOS',
         reposValue: 'PÚBLICOS',
         focusLabel: 'FOCO',
-        focusValue: 'BACK-END',
+        focusValue: 'FULL-STACK',
         stackLabel: 'TECNOLOGIAS'
       }
     },
     timeline: {
-      label: '005 — LINHA DO TEMPO',
+      label: '004 — LINHA DO TEMPO',
       title1: 'Experiência',
       title2: '& Formação',
       types: {
@@ -85,20 +99,42 @@ export const dict = {
       },
       items: {
         etec: {
-          subtitle: 'Suporte de TI',
-          detail: 'Técnico em Suporte para TI com foco em Redes, Hardwares, Embarcados e Sistemas.',
+          subtitle: 'SUPORTE DE TI',
+          desc: 'Construção de base técnica em infraestrutura, com foco em redes corporativas, hardware e sistemas embarcados.',
+          detail: [
+            'Domínio prático em manutenção de computadores e metodologias de suporte ao cliente.',
+            'Fundamentos sólidos em Segurança Digital, Computação em Nuvem e Redes de Computadores.',
+            'Introdução à Lógica de Programação, IoT (Internet das Coisas) e Desenvolvimento Web básico.'
+          ],
+          link: { url: '/Portfolio/images/etec-diploma.jpg', label: 'Visualizar Diploma' }
         },
         fatec: {
-          subtitle: 'Desenvolvimento de Software',
-          detail: 'Graduação em Desenvolvimento de Software com foco em Back-End e arquitetura de sistemas.',
+          subtitle: 'DESENVOLVIMENTO DE SOFTWARE',
+          desc: 'Engenharia de software multiplataforma, com ênfase no desenvolvimento de Back-End e arquitetura de sistemas distribuídos.',
+          detail: [
+            'Desenvolvimento ponta a ponta de ecossistemas (Web e Mobile) utilizando Next.js, React, Java (Spring Boot) e Python (FastAPI).',
+            'Modelagem e orquestração de bancos de dados relacionais e NoSQL (MySQL, MongoDB, Redis, Firebase).',
+            'Aplicação de metodologias ágeis (Scrum/Kanban) e diretrizes de Interação Humano-Computador (IHC) para otimização da usabilidade.'
+          ]
         },
         oracle: {
-          subtitle: 'Certificação de Banco de Dados',
-          detail: 'Certificação profissional em banco de dados Oracle.',
+          subtitle: 'DATABASE FOUNDATIONS',
+          desc: 'Validação técnica em fundamentos de bancos de dados relacionais e estruturação do ciclo de vida da informação no ecossistema Oracle.',
+          detail: [
+            'Domínio das etapas iniciais de arquitetura de dados, englobando a construção de modelagem conceitual e lógica.',
+            'Compreensão e aplicação de princípios introdutórios de modelagem física, mapeando entidades e relacionamentos para garantir a integridade do banco antes da implementação final.'
+          ],
+          link: { url: '/Portfolio/images/oracle-diploma.jpg', label: 'Visualizar Diploma' }
         },
         suporte: {
-          subtitle: 'Estagiário em Mar Brasil',
-          detail: 'Atuação em diagnóstico e manutenção de hardware, redes e sistemas.',
+          subtitle: 'ESTAGIÁRIO DE TI (SUPORTE E DESENVOLVIMENTO)',
+          desc: 'Otimização da operação interna através da reestruturação da infraestrutura de redes e do desenvolvimento full-stack de plataformas sob demanda.',
+          detail: [
+            'Redes e Infraestrutura: Implementação de gateways, roteamento avançado, túneis VPN (WireGuard) e Load Balancing para garantir alta disponibilidade corporativa.',
+            'Engenharia de Software: Arquitetura e desenvolvimento do zero de plataformas internas conteinerizadas (Web e Mobile) para resolução de gargalos operacionais, com deploy em ambientes VPS.',
+            'DevOps & Automação: Implementação de fluxos de automação de negócios (n8n) e utilização de desenvolvimento assistido por IA para acelerar o ciclo de entrega de software.',
+            'Suporte Estruturado: Resolução de chamados N1/N2 com documentação rigorosa de processos via Notion.'
+          ]
         }
       }
     },
@@ -129,18 +165,16 @@ export const dict = {
     },
     about: {
       label: '001 — ABOUT',
-      title1: 'Software',
-      title2: 'engineering',
-      title3: 'from hardware to code.',
-      p1: 'Software Development student at FATEC, with a technical foundation from ETEC in infrastructure, support, and hardware. Currently, I focus on building systems that bridge efficient back-end logic with intuitive interfaces.',
-      p2: 'My journey transitions between embedded systems development and modern web architecture, always seeking the balance between technical precision and practical software utility.',
-      roleLabel: 'ROLE',
-      roleValue: 'FULL-STACK DEV.',
+      title: 'Software Engineering and Architecture',
+      p1: 'My journey in technology began in infrastructure (ETEC), forging a solid foundation in networks, hardware, and servers. Today, pursuing a degree in Cross-Platform Software Development (FATEC), I apply this critical vision to design complete ecosystems.',
+      p2: 'More than just writing code, I focus on orchestrating end-to-end scalable solutions, from database architecture and Python/Java APIs to the final user interface. My goal is always to balance technical back-end precision with excellence in usability.',
+      roleLabel: 'FOCUS',
+      roleValue: 'Software Engineering • Infrastructure • Full-Stack',
       locationLabel: 'LOCATION',
-      locationValue: 'PRAIA GRANDE - SP',
+      locationValue: 'Praia Grande - SP, Brazil',
     },
     collections: {
-      label: '002 — THE COLLECTIONS',
+      label: '003 — THE COLLECTIONS',
       title1: 'Selected',
       title2: 'Works',
       subtitle: 'CURATED PROJECTS SHOWCASING TECHNICAL RANGE AND CREATIVE VISION',
@@ -162,18 +196,34 @@ export const dict = {
       }
     },
     atelier: {
-      label: '003 — THE ATELIER',
+      label: '002 — THE ATELIER',
       title1: 'Tech',
       title2: 'Stack',
-      categories: {
-        lang: 'LANGUAGES',
-        frameworks: 'FRAMEWORKS & TOOLS',
-        hardware: 'HARDWARE'
-      },
-      hardwareItems: ['Hardware Maintenance', 'Networking', 'Embedded Systems']
+      categories: [
+        {
+          label: 'FRONT-END & UI',
+          items: ['TypeScript', 'JavaScript', 'Next.js', 'React', 'Tailwind CSS']
+        },
+        {
+          label: 'BACK-END & APIs',
+          items: ['Java (Spring Boot)', 'Python (FastAPI, Django)', 'PHP (Laravel)', 'C++', 'C#']
+        },
+        {
+          label: 'DATABASES',
+          items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Firebase', 'Oracle']
+        },
+        {
+          label: 'INFRASTRUCTURE, DEVOPS & NETWORKS',
+          items: ['Docker', 'Linux', 'Google Cloud & VPS', 'WireGuard (VPN)', 'Nginx & Gateways']
+        },
+        {
+          label: 'HARDWARE & AUTOMATION',
+          items: ['n8n (Automation)', 'Embedded Systems', 'Hardware Architecture', 'Git / GitHub']
+        }
+      ]
     },
     github: {
-      label: '004 — GITHUB',
+      label: '005 — GITHUB',
       title1: 'Open',
       title2: 'Source',
       desc: 'Full-Stack Engineering & Embedded Systems | FATEC & ETEC.',
@@ -183,12 +233,12 @@ export const dict = {
         reposLabel: 'REPOSITORIES',
         reposValue: 'PUBLIC',
         focusLabel: 'FOCUS',
-        focusValue: 'BACK-END',
+        focusValue: 'FULL-STACK',
         stackLabel: 'STACK'
       }
     },
     timeline: {
-      label: '005 — TIMELINE',
+      label: '004 — TIMELINE',
       title1: 'Experience',
       title2: '& Formation',
       types: {
@@ -198,20 +248,42 @@ export const dict = {
       },
       items: {
         etec: {
-          subtitle: 'IT Support',
-          detail: 'IT Support Technician with focus on Networks, Hardware, Embedded Systems and Software.',
+          subtitle: 'IT SUPPORT',
+          desc: 'Building a technical foundation in infrastructure, focusing on enterprise networks, hardware, and embedded systems.',
+          detail: [
+            'Practical domain in computer maintenance and customer support methodologies.',
+            'Solid fundamentals in Digital Security, Cloud Computing, and Computer Networks.',
+            'Introduction to Programming Logic, IoT (Internet of Things), and basic Web Development.'
+          ],
+          link: { url: '/Portfolio/images/etec-diploma.jpg', label: 'View Diploma' }
         },
         fatec: {
-          subtitle: 'Software Development',
-          detail: 'Graduation in Software Development focusing on Back-End and systems architecture.',
+          subtitle: 'SOFTWARE DEVELOPMENT',
+          desc: 'Cross-platform software engineering, with an emphasis on Back-End development and distributed systems architecture.',
+          detail: [
+            'End-to-end development of ecosystems (Web and Mobile) using Next.js, React, Java (Spring Boot), and Python (FastAPI).',
+            'Modeling and orchestration of relational and NoSQL databases (MySQL, MongoDB, Redis, Firebase).',
+            'Application of agile methodologies (Scrum/Kanban) and Human-Computer Interaction (HCI) guidelines to optimize usability.'
+          ]
         },
         oracle: {
-          subtitle: 'Database Certification',
-          detail: 'Professional certification in Oracle databases.',
+          subtitle: 'DATABASE FOUNDATIONS',
+          desc: 'Technical validation in relational database fundamentals and information lifecycle structuring in the Oracle ecosystem.',
+          detail: [
+            'Mastery of initial data architecture stages, encompassing conceptual and logical modeling construction.',
+            'Understanding and application of introductory physical modeling principles, mapping entities and relationships to ensure database integrity before final implementation.'
+          ],
+          link: { url: '/Portfolio/images/oracle-diploma.jpg', label: 'View Diploma' }
         },
         suporte: {
-          subtitle: 'Intern at Mar Brasil',
-          detail: 'Diagnostics and maintenance of hardware, networks and systems.',
+          subtitle: 'IT INTERN (SUPPORT AND DEVELOPMENT)',
+          desc: 'Optimization of internal operations through network infrastructure restructuring and full-stack development of on-demand platforms.',
+          detail: [
+            'Networks and Infrastructure: Implementation of gateways, advanced routing, VPN tunnels (WireGuard), and Load Balancing to ensure corporate high availability.',
+            'Software Engineering: Architecture and zero-to-one development of containerized internal platforms (Web and Mobile) to resolve operational bottlenecks, deployed in VPS environments.',
+            'DevOps & Automation: Implementation of business automation workflows (n8n) and utilization of AI-assisted development to accelerate the software delivery cycle.',
+            'Structured Support: N1/N2 ticket resolution with rigorous process documentation via Notion.'
+          ]
         }
       }
     },

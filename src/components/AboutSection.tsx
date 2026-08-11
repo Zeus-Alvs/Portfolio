@@ -49,13 +49,7 @@ export default function AboutSection() {
                   letterSpacing: '0.04em',
                 }}
               >
-                {t.title1}
-                <br />
-                {t.title2}
-                <br />
-                <span style={{ fontStyle: 'italic', color: '#C9A96E' }}>
-                  {t.title3}
-                </span>
+                {t.title}
               </h2>
             </div>
 
@@ -115,7 +109,7 @@ export default function AboutSection() {
                   <p
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
-                      fontSize: '1.4rem',
+                      fontSize: 'clamp(1rem, 2vw, 1.3rem)',
                       color: '#FFFFFF',
                       fontWeight: 400,
                       letterSpacing: '0.05em',
@@ -142,7 +136,7 @@ export default function AboutSection() {
                   <p
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
-                      fontSize: '1.4rem',
+                      fontSize: 'clamp(1rem, 2vw, 1.3rem)',
                       color: '#FFFFFF',
                       fontWeight: 400,
                       letterSpacing: '0.05em',
@@ -174,7 +168,7 @@ export default function AboutSection() {
                     padding: '0.6rem 1.2rem', // adjust padding for this context
                   }}
                 >
-                  <span style={{ fontSize: '0.55rem' }}>{lang === 'en' ? 'HIRE ME' : 'CONTRATAR'}</span>
+                  <span style={{ fontSize: '0.55rem' }}>{lang === 'en' ? 'LET\'S CONNECT' : 'VAMOS CONECTAR'}</span>
                   <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1">
                     <line x1="0" y1="6" x2="10" y2="6" />
                     <polyline points="6,2 10,6 6,10" />

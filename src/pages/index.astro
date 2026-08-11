@@ -131,10 +131,10 @@ try {
   <div id="page-content" style={{ transition: 'opacity 0.4s ease' }}>
     <HeroSection client:load />
     <AboutSection client:visible />
-    <Collections repos={formattedRepos} client:visible />
     <Atelier client:visible />
-    <GitHubSection client:visible />
+    <Collections repos={formattedRepos} client:visible />
     <Timeline client:visible />
+    <GitHubSection client:visible />
     <Footer client:load />
   </div>
 </Layout>

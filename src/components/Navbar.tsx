@@ -21,10 +21,10 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t.about, href: '#about' },
-    { label: t.collections, href: '#collections' },
     { label: t.atelier, href: '#atelier' },
-    { label: t.github, href: '#github' },
+    { label: t.collections, href: '#collections' },
     { label: t.timeline, href: '#timeline' },
+    { label: t.github, href: '#github' },
     { label: t.contact, href: '#contact' },
   ];
 

@@ -32,6 +32,7 @@ const cardVariants = {
 
 export default function Collections({ repos = [] }: Props) {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
   const lang = useStore(currentLang);
   const t = dict[lang].collections;
@@ -148,6 +149,7 @@ export default function Collections({ repos = [] }: Props) {
                       transition: 'all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
                     }}
                     onMouseEnter={(e) => {
+                      setHoveredId(index);
                       e.currentTarget.style.paddingLeft = '1.5rem';
                       const n = e.currentTarget.querySelector(
                         '.proj-num'
@@ -155,6 +157,7 @@ export default function Collections({ repos = [] }: Props) {
                       if (n) n.style.color = '#C9A96E';
                     }}
                     onMouseLeave={(e) => {
+                      setHoveredId(null);
                       e.currentTarget.style.paddingLeft = '0';
                       const n = e.currentTarget.querySelector(
                         '.proj-num'
@@ -210,8 +213,18 @@ export default function Collections({ repos = [] }: Props) {
 
                     {/* Toggle icon */}
                     <motion.div
-                      animate={{ rotate: expandedId === index ? 45 : 0 }}
-                      transition={{ duration: 0.35 }}
+                      animate={{ 
+                        rotate: expandedId === index ? 45 : 0,
+                        y: (hoveredId === index && expandedId !== index) ? [0, -3, 0] : 0
+                      }}
+                      transition={{ 
+                        rotate: { duration: 0.35 },
+                        y: {
+                          duration: (hoveredId === index && expandedId !== index) ? 0.6 : 0.2,
+                          repeat: (hoveredId === index && expandedId !== index) ? Infinity : 0,
+                          ease: "easeInOut"
+                        }
+                      }}
                       style={{
                         width: '28px',
                         height: '28px',

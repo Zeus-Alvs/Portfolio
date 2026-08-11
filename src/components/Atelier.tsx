@@ -31,20 +31,7 @@ export default function Atelier() {
   const lang = useStore(currentLang);
   const t = dict[lang].atelier;
 
-  const categories: TechCategory[] = [
-    {
-      label: t.categories.lang,
-      items: ['C++', 'Java', 'PHP', 'Python', 'JavaScript', 'TypeScript', 'MySQL', 'MongoDB'],
-    },
-    {
-      label: t.categories.frameworks,
-      items: ['Next.js', 'Laravel', 'Django', 'Docker', 'Git', 'N8N', 'Blender'],
-    },
-    {
-      label: t.categories.hardware,
-      items: t.hardwareItems,
-    },
-  ];
+  const categories: TechCategory[] = t.categories;
 
   return (
     <section id="atelier" className="section-padding">
