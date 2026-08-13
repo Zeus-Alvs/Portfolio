@@ -15,8 +15,8 @@
   },
   {
     "title": "Cosmic Mind",
-    "description": "Painel web e API (Next.js, FastAPI, MongoDB) de monitoramento cognitivo para crianças com TDAH. Recebe métricas do jogo da Equipe Spectrum para análise médica. Projeto integrador desenvolvido como requisito parcial do terceiro semestre do curso de Desenvolvimento de Sistemas Multiplataformas na FATEC.",
-    "descriptionEn": "Web panel and API (Next.js, FastAPI, MongoDB) for cognitive monitoring for children with ADHD. Receives game metrics from the Spectrum Team for medical analysis. Integrative project developed as a partial requirement of the third semester of the Multiplatform Systems Development course at FATEC.",
+    "description": "SaaS de monitoramento cognitivo para crianças com TDAH (Next.js, FastAPI, MongoDB). A plataforma recebe métricas do jogo da Equipe Spectrum e fornece análises médicas detalhadas. Projeto integrador do 3º semestre de Desenvolvimento de Sistemas Multiplataformas - FATEC.",
+    "descriptionEn": "Cognitive monitoring SaaS for children with ADHD (Next.js, FastAPI, MongoDB). The platform receives game metrics from Team Spectrum and provides detailed medical analysis. Integrative project for the 3rd semester of Multiplatform Systems Development - FATEC.",
     "topics": [
       "TypeScript",
       "Python",

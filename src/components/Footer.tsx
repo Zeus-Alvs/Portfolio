@@ -123,31 +123,11 @@ export default function Footer() {
         <div
           style={{
             display: 'flex',
-            gap: '2.5rem',
+            justifyContent: 'center',
             alignItems: 'center',
             marginTop: '2rem',
           }}
         >
-          <a
-            href="https://github.com/Zeus-Alvs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            style={{
-              fontFamily: "'Calibri Light', Calibri, sans-serif",
-              fontSize: '0.55rem',
-              letterSpacing: '0.2em',
-              color: '#888888',
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              fontWeight: 400,
-            }}
-          >
-            GITHUB
-          </a>
-
-          <span style={{ color: '#1A1A1A', fontSize: '0.3rem' }}>●</span>
-
           <a
             href="https://www.linkedin.com/in/zeus-alves-machado-2964b8370"
             target="_blank"
@@ -155,12 +135,12 @@ export default function Footer() {
             className="social-link"
             style={{
               fontFamily: "'Calibri Light', Calibri, sans-serif",
-              fontSize: '0.55rem',
-              letterSpacing: '0.2em',
-              color: '#888888',
+              fontSize: '0.7rem',
+              letterSpacing: '0.3em',
+              color: '#FFFFFF',
               textDecoration: 'none',
               textTransform: 'uppercase',
-              fontWeight: 400,
+              fontWeight: 600,
             }}
           >
             LINKEDIN
