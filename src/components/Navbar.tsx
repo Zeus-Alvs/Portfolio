@@ -140,7 +140,9 @@ export default function Navbar() {
         }}
       >
         {/* Language Switcher */}
-        <LanguageSwitcher />
+        <div style={{ pointerEvents: 'auto' }}>
+          <LanguageSwitcher />
+        </div>
 
         {/* Central Logo - Spans across Hero to Nav fluidly */}
         <motion.a
