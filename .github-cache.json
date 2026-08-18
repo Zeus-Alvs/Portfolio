@@ -1,8 +1,8 @@
 [
   {
     "title": "Aethesa",
-    "description": "Projeto efetuado a pedido e em colaboração de estudantes da universidade Belas Artes. \"Aethesa busca suprir a necessidade de mudança do mercado, almejando inovação e criatividade para moda urbana, utilizando tecnologias que ajustam ao corpo e reduzem a produção de resíduos têxteis, assim respeitando a sustentabilidade em conjunto do conforto.\"",
-    "descriptionEn": "Project carried out at the request and in collaboration of students from Belas Artes University. \"Aethesa seeks to meet the need for change in the market, aiming for innovation and creativity for urban fashion, using technologies that adjust to the body and reduce the production of textile waste, thus respecting sustainability together with comfort.\"",
+    "description": "E-commerce conceitual focado em moda urbana sustentável, projetado do zero em colaboração com estudantes de design da universidade Belas Artes.\n\n**Engenharia & Arquitetura:**\n- **Arquitetura Full-Stack:** Desenvolvimento da plataforma web utilizando PHP com o framework Laravel, orquestrando fluxos de requisição sob o rigoroso padrão de design MVC (Model-View-Controller).\n- **Modelagem Relacional:** Estruturação lógica e persistência de dados utilizando bancos relacionais (MySQL) para sustentar a lógica de catálogo de moda e e-commerce de forma escalável.\n- **Integração Multidisciplinar:** Tradução direta de requisitos de design e conceito de produto (tecnologia têxtil e sustentabilidade) para uma interface sistêmica altamente funcional, responsiva e centrada na Experiência do Usuário (UX).\n",
+    "descriptionEn": "Conceptual e-commerce focused on sustainable urban fashion, designed from scratch in collaboration with design students from Belas Artes university.\n\n**Engineering & Architecture:**\n- **Full-Stack Architecture:** Development of the web platform using PHP with the Laravel framework, orchestrating request flows under the strict MVC (Model-View-Controller) design pattern.\n- **Relational Modeling:** Logical structuring and data persistence using relational databases (MySQL) to support the fashion catalog and e-commerce logic in a scalable way.\n- **Multidisciplinary Integration:** Direct translation of design requirements and product concept (textile technology and sustainability) into a highly functional, responsive and User Experience (UX)-centric systemic interface.",
     "topics": [
       "PHP",
       "CSS",
@@ -15,8 +15,8 @@
   },
   {
     "title": "Cosmic Mind",
-    "description": "SaaS de monitoramento cognitivo para crianças com TDAH (Next.js, FastAPI, MongoDB). A plataforma recebe métricas do jogo da Equipe Spectrum e fornece análises médicas detalhadas. Projeto integrador do 3º semestre de Desenvolvimento de Sistemas Multiplataformas - FATEC.",
-    "descriptionEn": "Cognitive monitoring SaaS for children with ADHD (Next.js, FastAPI, MongoDB). The platform receives game metrics from Team Spectrum and provides detailed medical analysis. Integrative project for the 3rd semester of Multiplatform Systems Development - FATEC.",
+    "description": "SaaS de monitoramento cognitivo para crianças com TDAH. A plataforma recebe métricas do jogo e fornece análises médicas detalhadas.\n\n**Engenharia & Arquitetura:**\n- **Motor Analítico:** API em Python (FastAPI) e MongoDB processando métricas complexas de tempo de reação em tempo real.\n- **Segurança & Integração:** Pareamento entre Web e Mobile (Unity) via PIN efêmero e JWT, com dados blindados por Hashing Bcrypt.\n- **Infraestrutura:** Proxy reverso com Nginx, relatórios via DOM Fantasma e deploy orquestrado via Docker (VPS) e Vercel.\n",
+    "descriptionEn": "Cognitive monitoring SaaS for children with ADHD. The platform receives game metrics and provides detailed medical analysis.\n\n**Engineering & Architecture:**\n- **Analytical Engine:** API in Python (FastAPI) and MongoDB processing complex reaction time metrics in real time.\n- **Security & Integration:** Pairing between Web and Mobile (Unity) via ephemeral PIN and JWT, with data shielded by Bcrypt Hashing.\n- **Infrastructure:** Reverse proxy with Nginx, reports via Ghost DOM and orchestrated deployment via Docker (VPS) and Vercel.",
     "topics": [
       "TypeScript",
       "Python",
@@ -30,12 +30,12 @@
   },
   {
     "title": "Relay",
-    "description": "Relay é um orquestrador descentralizado em Python que elimina a necessidade de hospedagem paga para servidores. O sistema cria uma \"Mente Coletiva\" onde os próprios usuários se revezam como host de forma automática. Quando o jogador ativo sai, o progresso é sincronizado na nuvem e o \"bastão\" é passado para o próximo da fila de espera.",
-    "descriptionEn": "Relay is a decentralized orchestrator in Python that eliminates the need for paid server hosting. The system creates a \"Collective Mind\" where users themselves automatically take turns as hosts. When the active player leaves, progress is synced to the cloud and the \"baton\" is passed to the next person in line.",
+    "description": "Orquestrador descentralizado em Python que elimina a necessidade de hospedagem paga, criando uma rede P2P cooperativa para servidores multiplayer.\n\n**Engenharia & Arquitetura:**\n- **Rede Mesh & Sincronização:** Engenharia de comunicação transparente via túneis seguros do Tailscale, aliada ao Rclone para orquestrar a sincronização pesada de arquivos na nuvem.\n- **Desktop & Exclusão Mútua:** Launcher desktop desenvolvido em Python (Tkinter) com sistema rigoroso de concorrência e *locks* via banco de dados em tempo real (Firebase), prevenindo a corrupção de dados entre a troca de \"hosts\".\n- **Ecossistema Multiplataforma:** Pipeline de empacotamento nativo Windows (PyInstaller e Inno Setup) protegendo as chaves de sessão, integrado a um painel de gerenciamento web de alta performance renderizado em Next.js.\n",
+    "descriptionEn": "Decentralized orchestrator in Python that eliminates the need for paid hosting, creating a cooperative P2P network for multiplayer servers.\n\n**Engineering & Architecture:**\n- **Mesh Network & Synchronization:** Transparent communication engineering via Tailscale's secure tunnels, combined with Rclone to orchestrate heavy file synchronization in the cloud.\n- **Desktop & Mutual Exclusion:** Desktop launcher developed in Python (Tkinter) with a strict competition system and *locks* via real-time database (Firebase), preventing data corruption between changing hosts.\n- **Multiplatform Ecosystem:** Native Windows packaging pipeline (PyInstaller and Inno Setup) protecting session keys, integrated with a high-performance web management panel rendered in Next.js.",
     "topics": [
       "Python",
-      "CSS",
       "JavaScript",
+      "CSS",
       "Inno Setup"
     ],
     "html_url": "https://github.com/Zeus-Alvs/Relay",
@@ -91,8 +91,8 @@
   },
   {
     "title": "FleetSync",
-    "description": "Motor inteligente de matchmaking logístico por score (proximidade e urgência). API em Java Spring Boot + Postgres e Front em React. Simulação na Baixada Santista. Projeto desenvolvido como requisito parcial da matéria de Técnicas de Programação 2 do curso de Desenvolvimento de Software Multiplataforma na FATEC.",
-    "descriptionEn": "Intelligent logistics matchmaking engine based on score (proximity and urgency). API in Java Spring Boot + Postgres and Front in React. Simulation in Baixada Santista. Project developed as a partial requirement for Programming Techniques 2 of the Multiplatform Software Development course at FATEC.",
+    "description": "Plataforma B2B de gestão logística e \"matchmaking\" para alocação inteligente de frotas comerciais.\n\n**Engenharia & Arquitetura:**\n- **Motor de Matchmaking:** Construção da API em Java (Spring Boot) processando cálculos geoespaciais em memória (Fórmula de Haversine) para gerar ordenações de frotas multicritério em milissegundos.\n- **Simulação Geoespacial:** Integração React/Vite com Mapbox e Leaflet, desenvolvendo um motor assíncrono capaz de processar arrays densos de coordenadas (GeoJSON) e simular deslocamentos em tempo real.\n- **Segurança & Concorrência:** Persistência no PostgreSQL com transações atômicas (`@Transactional`) para prevenir sobreposição de veículos, tudo encapsulado sob arquitetura de autenticação JWT via Spring Security.\n",
+    "descriptionEn": "B2B logistics management and matchmaking platform for intelligent allocation of commercial fleets.\n\n**Engineering & Architecture:**\n- **Matchmaking Engine:** Construction of the API in Java (Spring Boot) processing geospatial calculations in memory (Haversine Formula) to generate multi-criteria fleet orderings in milliseconds.\n- **Geospatial Simulation:** React/Vite integration with Mapbox and Leaflet, developing an asynchronous engine capable of processing dense arrays of coordinates (GeoJSON) and simulating displacements in real time.\n- **Security & Concurrency:** Persistence in PostgreSQL with atomic transactions (`@Transactional`) to prevent overlapping vehicles, all encapsulated under JWT authentication architecture via Spring Security.",
     "topics": [
       "JavaScript",
       "Java",

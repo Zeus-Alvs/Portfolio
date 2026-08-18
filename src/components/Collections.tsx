@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useStore } from '@nanostores/react';
 import { currentLang } from '../store/i18n';
 import { dict } from '../i18n/dict';
+import { marked } from 'marked';
 
 export interface GitHubRepo {
   title: string;
@@ -305,17 +306,36 @@ export default function Collections({ repos = [] }: Props) {
                               gap: '1.5rem',
                             }}
                           >
-                            <p
-                              style={{
-                                fontFamily: "'Calibri Light', Calibri, sans-serif",
-                                fontSize: 'clamp(0.8rem, 1.1vw, 0.88rem)',
-                                lineHeight: 1.9,
-                                color: '#CCCCCC',
-                                fontWeight: 400,
+                            <style>{`
+                              .port-markdown {
+                                font-family: 'Calibri Light', Calibri, sans-serif;
+                                font-size: clamp(0.8rem, 1.1vw, 0.88rem);
+                                line-height: 1.9;
+                                color: #CCCCCC;
+                                font-weight: 400;
+                              }
+                              .port-markdown p {
+                                margin-bottom: 0.8rem;
+                              }
+                              .port-markdown strong {
+                                color: #FFFFFF;
+                                font-weight: 600;
+                              }
+                              .port-markdown ul {
+                                list-style-type: disc;
+                                margin-left: 1.5rem;
+                                margin-bottom: 1rem;
+                              }
+                              .port-markdown li {
+                                margin-bottom: 0.4rem;
+                              }
+                            `}</style>
+                            <div
+                              className="port-markdown"
+                              dangerouslySetInnerHTML={{
+                                __html: marked.parse(lang === 'en' && project.descriptionEn ? project.descriptionEn : project.description || '') as string
                               }}
-                            >
-                              {lang === 'en' && project.descriptionEn ? project.descriptionEn : project.description}
-                            </p>
+                            />
 
                             {/* Tags */}
                             {project.topics && project.topics.length > 0 && (

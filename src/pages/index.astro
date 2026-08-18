@@ -44,6 +44,21 @@ async function getGithubOpenGraphImage(repoUrl: string) {
   return null;
 }
 
+async function getPortfolioDescription(repoName: string, fetchOptions: any, fallbackDescription: string): Promise<string> {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}/contents/port.md`, fetchOptions);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.encoding === 'base64') {
+        return Buffer.from(data.content, 'base64').toString('utf-8');
+      }
+    }
+  } catch(e) {
+    console.error(`Error fetching port.md for ${repoName}:`, e);
+  }
+  return fallbackDescription;
+}
+
 try {
   let useCache = false;
   try {
@@ -98,7 +113,7 @@ try {
 
           const combinedTopics = Array.from(new Set([...(repo.topics || []), ...languages]));
           
-          const rawDescription = repo.description || '';
+          const rawDescription = await getPortfolioDescription(repo.name, fetchOptions, repo.description || '');
           const descriptionEn = await translateToEnglish(rawDescription);
 
           return {
@@ -119,6 +134,10 @@ try {
       
       // Save to cache
       await fs.writeFile(cacheFile, JSON.stringify(formattedRepos, null, 2));
+    } else {
+      console.error(`Failed to fetch repos: ${response.status} ${response.statusText}`);
+      const errText = await response.text();
+      console.error(`Error details: ${errText}`);
     }
   }
 } catch (error) {

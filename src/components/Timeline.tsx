@@ -336,8 +336,8 @@ export default function Timeline() {
                               style={{
                                 fontFamily: "'Calibri Light', Calibri, sans-serif",
                                 fontSize: 'clamp(0.75rem, 1vw, 0.85rem)',
-                                lineHeight: 1.6,
-                                color: '#AAAAAA',
+                                lineHeight: 1.8,
+                                color: '#CCCCCC',
                                 fontWeight: 400,
                                 maxWidth: '650px',
                                 paddingLeft: '1rem',
