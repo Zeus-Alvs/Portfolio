@@ -1,0 +1,161 @@
+[
+  {
+    "title": "Aethesa",
+    "description": "E-commerce conceitual focado em moda urbana sustentável, projetado do zero em colaboração com estudantes de design da universidade Belas Artes.\n\n**Engenharia & Arquitetura:**\n- **Arquitetura Full-Stack:** Desenvolvimento da plataforma web utilizando PHP com o framework Laravel, orquestrando fluxos de requisição sob o rigoroso padrão de design MVC (Model-View-Controller).\n- **Modelagem Relacional:** Estruturação lógica e persistência de dados utilizando bancos relacionais (MySQL) para sustentar a lógica de catálogo de moda e e-commerce de forma escalável.\n- **Integração Multidisciplinar:** Tradução direta de requisitos de design e conceito de produto (tecnologia têxtil e sustentabilidade) para uma interface sistêmica altamente funcional, responsiva e centrada na Experiência do Usuário (UX).\n",
+    "descriptionEn": "Conceptual e-commerce focused on sustainable urban fashion, designed from scratch in collaboration with design students from Belas Artes university.\n\n**Engineering & Architecture:**\n- **Full-Stack Architecture:** Development of the web platform using PHP with the Laravel framework, orchestrating request flows under the strict MVC (Model-View-Controller) design pattern.\n- **Relational Modeling:** Logical structuring and data persistence using relational databases (MySQL) to support the fashion catalog and e-commerce logic in a scalable way.\n- **Multidisciplinary Integration:** Direct translation of design requirements and product concept (textile technology and sustainability) into a highly functional, responsive and User Experience (UX)-centric systemic interface.",
+    "customEtiqueta": "PHP (Laravel)",
+    "topics": [
+      "PHP",
+      "CSS",
+      "Blade",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Aethesa",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1115484219/9227d466-339e-4d36-b0f3-979553d51c4c"
+  },
+  {
+    "title": "Cosmic Mind",
+    "description": "SaaS de monitoramento cognitivo para crianças com TDAH. A plataforma recebe métricas do jogo e fornece análises médicas detalhadas.\n\n**Engenharia & Arquitetura:**\n- **Motor Analítico:** API em Python (FastAPI) e MongoDB processando métricas complexas de tempo de reação em tempo real.\n- **Segurança & Integração:** Pareamento entre Web e Mobile (Unity) via PIN efêmero e JWT, com dados blindados por Hashing Bcrypt.\n- **Infraestrutura:** Proxy reverso com Nginx, relatórios via DOM Fantasma e deploy orquestrado via Docker (VPS) e Vercel.\n",
+    "descriptionEn": "Cognitive monitoring SaaS for children with ADHD. The platform receives game metrics and provides detailed medical analysis.\n\n**Engineering & Architecture:**\n- **Analytical Engine:** API in Python (FastAPI) and MongoDB processing complex reaction time metrics in real time.\n- **Security & Integration:** Pairing between Web and Mobile (Unity) via ephemeral PIN and JWT, with data shielded by Bcrypt Hashing.\n- **Infrastructure:** Reverse proxy with Nginx, reports via Ghost DOM and orchestrated deployment via Docker (VPS) and Vercel.",
+    "customEtiqueta": "Next.js • FastAPI",
+    "topics": [
+      "TypeScript",
+      "Python",
+      "CSS",
+      "JavaScript",
+      "Dockerfile"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Cosmic-Mind",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1210967411/f81c58ff-8bf9-4fc0-b0e6-ad0fb9f32ab9"
+  },
+  {
+    "title": "Relay",
+    "description": "Orquestrador descentralizado em Python que elimina a necessidade de hospedagem paga, criando uma rede P2P cooperativa para servidores multiplayer.\n\n**Engenharia & Arquitetura:**\n- **Rede Mesh & Sincronização:** Engenharia de comunicação transparente via túneis seguros do Tailscale, aliada ao Rclone para orquestrar a sincronização pesada de arquivos na nuvem.\n- **Desktop & Exclusão Mútua:** Launcher desktop desenvolvido em Python (Tkinter) com sistema rigoroso de concorrência e *locks* via banco de dados em tempo real (Firebase), prevenindo a corrupção de dados entre a troca de \"hosts\".\n- **Ecossistema Multiplataforma:** Pipeline de empacotamento nativo Windows (PyInstaller e Inno Setup) protegendo as chaves de sessão, integrado a um painel de gerenciamento web de alta performance renderizado em Next.js.\n",
+    "descriptionEn": "Decentralized orchestrator in Python that eliminates the need for paid hosting, creating a cooperative P2P network for multiplayer servers.\n\n**Engineering & Architecture:**\n- **Mesh Network & Synchronization:** Transparent communication engineering via Tailscale's secure tunnels, combined with Rclone to orchestrate heavy file synchronization in the cloud.\n- **Desktop & Mutual Exclusion:** Desktop launcher developed in Python (Tkinter) with a strict competition system and *locks* via real-time database (Firebase), preventing data corruption between changing hosts.\n- **Multiplatform Ecosystem:** Native Windows packaging pipeline (PyInstaller and Inno Setup) protecting session keys, integrated with a high-performance web management panel rendered in Next.js.",
+    "customEtiqueta": "Python • Next.js",
+    "topics": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "Inno Setup"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Relay",
+    "homepage": "https://relay-orchestrator.vercel.app/",
+    "coverImage": "https://api.microlink.io/?url=https%3A%2F%2Frelay-orchestrator.vercel.app%2F&screenshot=true&meta=false&embed=screenshot.url"
+  },
+  {
+    "title": "Alloy",
+    "description": "Aplicativo social e competitivo de monitoramento de treinos, desenhado em um ecossistema modular para eliminar a transição entre planejamento e execução.\n\n**Engenharia & Arquitetura:**\n- **Ecossistema Multiplataforma:** Arquitetura estruturada em Monorepo integrando um dashboard administrativo (Next.js) e um aplicativo nativo para o consumidor final (React Native).\n- **Backend & OTA Updates:** Construção de um microsserviço de distribuição em Python utilizando FastAPI para gerenciamento de versões nativas e downloads automáticos (APK).\n- **Segurança Transacional:** Implementação do Firebase, desenhando regras granulares de segurança (Rules) e transações atômicas no Firestore para impedir sobreposição de concorrência.\n",
+    "descriptionEn": "Social and competitive training monitoring application, designed in a modular ecosystem to eliminate the transition between planning and execution.\n\n**Engineering & Architecture:**\n- **Multiplatform Ecosystem:** Architecture structured in Monorepo integrating an administrative dashboard (Next.js) and a native application for the end consumer (React Native).\n- **Backend & OTA Updates:** Construction of a distribution microservice in Python using FastAPI to manage native versions and automatic downloads (APK).\n- **Transactional Security:** Implementation of Firebase, designing granular security rules (Rules) and atomic transactions in Firestore to prevent overlapping competition.",
+    "customEtiqueta": "React Native • Next.js • Firebase",
+    "topics": [
+      "TypeScript",
+      "CMake",
+      "C",
+      "C++",
+      "Python",
+      "CSS",
+      "PowerShell",
+      "JavaScript",
+      "Kotlin",
+      "Ruby",
+      "Swift"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Alloy",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1309976134/9b06415f-1873-4f3a-bbf1-91185d8d5d82"
+  },
+  {
+    "title": "Aurora Boutique",
+    "description": "E-commerce arquitetado sob um modelo poliglota de banco de dados para suportar ingestão automatizada e gestão de estoque em larga escala.\n\n**Engenharia & Arquitetura:**\n- **Arquitetura Poliglota de Dados:** Integração de banco de dados relacional (SQLite) com banco NoSQL orientado a documentos (Firestore) para otimizar diferentes domínios de negócio.\n- **Motor de Ingestão:** Desenvolvimento de pipelines estruturados para o consumo, processamento e sincronização de dados via integração com APIs externas.\n- **Lógica e Regras de Negócio:** Criação do núcleo sistêmico em Python utilizando Django, contemplando um sistema CRUD rigoroso para controle de estoque, fluxo de vendas e segurança de autenticação.\n",
+    "descriptionEn": "E-commerce architected under a polyglot database model to support automated ingestion and large-scale inventory management.\n\n**Engineering & Architecture:**\n- **Polyglot Data Architecture:** Integration of relational database (SQLite) with document-oriented NoSQL database (Firestore) to optimize different business domains.\n- **Ingestion Engine:** Development of structured pipelines for data consumption, processing and synchronization via integration with external APIs.\n- **Business Logic and Rules:** Creation of the systemic core in Python using Django, including a rigorous CRUD system for inventory control, sales flow and authentication security.",
+    "customEtiqueta": "Python (Django) • NoSQL",
+    "topics": [
+      "HTML",
+      "CSS",
+      "Python"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Aurora-Boutique",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1251910949/7310a0e6-43c7-420d-a36e-22a55bfdf115"
+  },
+  {
+    "title": "Elegance PH",
+    "description": "Aplicação web completa desenvolvida como Projeto Integrador da FATEC para impulsionar a transformação digital da loja Elegance PH.\n\n**Engenharia & Arquitetura:**\n- **Arquitetura Back-End:** Estruturação de um sistema web contendo autenticação segura e gestão de sessões de usuário.\n- **Modelagem Relacional:** Operações e consultas no banco de dados SQL para sustentar a lógica comercial do ecossistema.\n- **Painel Administrativo:** Desenvolvimento de um painel de controle com operações CRUD completas para gestão dinâmica do catálogo de produtos.\n",
+    "descriptionEn": "Complete web application developed as a FATEC Integrator Project to drive the digital transformation of the Elegance PH store.\n\n**Engineering & Architecture:**\n- **Back-End Architecture:** Structuring a web system containing secure authentication and user session management.\n- **Relational Modeling:** Operations and queries in the SQL database to support the ecosystem's business logic.\n- **Administrative Panel:** Development of a control panel with complete CRUD operations for dynamic management of the product catalog.",
+    "customEtiqueta": "PHP • SQL",
+    "topics": [
+      "PHP",
+      "CSS",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Elegance-PH",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1091216559/8ff0132d-4ae8-4d84-b5b7-25450f306ab5"
+  },
+  {
+    "title": "FleetSync",
+    "description": "Plataforma B2B de gestão logística e \"matchmaking\" para alocação inteligente de frotas comerciais.\n\n**Engenharia & Arquitetura:**\n- **Motor de Matchmaking:** Construção da API em Java (Spring Boot) processando cálculos geoespaciais em memória (Fórmula de Haversine) para gerar ordenações de frotas multicritério em milissegundos.\n- **Simulação Geoespacial:** Integração React/Vite com Mapbox e Leaflet, desenvolvendo um motor assíncrono capaz de processar arrays densos de coordenadas (GeoJSON) e simular deslocamentos em tempo real.\n- **Segurança & Concorrência:** Persistência no PostgreSQL com transações atômicas (`@Transactional`) para prevenir sobreposição de veículos, tudo encapsulado sob arquitetura de autenticação JWT via Spring Security.\n",
+    "descriptionEn": "B2B logistics management and matchmaking platform for intelligent allocation of commercial fleets.\n\n**Engineering & Architecture:**\n- **Matchmaking Engine:** Construction of the API in Java (Spring Boot) processing geospatial calculations in memory (Haversine Formula) to generate multi-criteria fleet orderings in milliseconds.\n- **Geospatial Simulation:** React/Vite integration with Mapbox and Leaflet, developing an asynchronous engine capable of processing dense arrays of coordinates (GeoJSON) and simulating displacements in real time.\n- **Security & Concurrency:** Persistence in PostgreSQL with atomic transactions (`@Transactional`) to prevent overlapping vehicles, all encapsulated under JWT authentication architecture via Spring Security.",
+    "customEtiqueta": "Java (Spring) • React",
+    "topics": [
+      "JavaScript",
+      "Java",
+      "CSS",
+      "HTML",
+      "Batchfile"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/FleetSync",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1243942895/67ed1bcd-44b4-4979-a1c5-eddb3ccfd9d8"
+  },
+  {
+    "title": "Portfolio",
+    "description": "Plataforma pessoal focada na exibição de projetos de Back-End, Infraestrutura e Sistemas Embarcados sob uma estética Dark Luxury.\n\n**Engenharia & Arquitetura:**\n- **Performance & SEO:** Desenvolvido com Astro 6 e React 19, garantindo hidratação parcial e otimização extrema de tempo de carregamento.\n- **Interatividade & Estado:** Motor de animações arquitetado com Framer Motion, simulações físicas em Canvas 2D e reatividade de internacionalização (i18n) orquestrada nativamente por Nanostores.\n- **DevOps & CI/CD:** Esteira de deploy totalmente automatizada configurada via GitHub Actions para publicação contínua.\n",
+    "descriptionEn": "Personal platform focused on displaying Back-End, Infrastructure and Embedded Systems projects under a Dark Luxury aesthetic.\n\n**Engineering & Architecture:**\n- **Performance & SEO:** Developed with Astro 6 and React 19, ensuring partial hydration and extreme loading time optimization.\n- **Interactivity & Status:** Animation engine architected with Framer Motion, physical simulations in 2D Canvas and internationalization reactivity (i18n) natively orchestrated by Nanostores.\n- **DevOps & CI/CD:** Fully automated deployment mat configured via GitHub Actions for continuous publishing.",
+    "customEtiqueta": "Astro • React • TS",
+    "topics": [
+      "TypeScript",
+      "Astro",
+      "CSS",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/Portfolio",
+    "homepage": "https://zeus-alvs.github.io/Portfolio/",
+    "coverImage": "https://repository-images.githubusercontent.com/1224094680/97d3bca6-a4e2-44f6-8c82-00cccb8829bd"
+  },
+  {
+    "title": "StudIA",
+    "description": "Copiloto de estudos desktop multiplataforma, alimentado por Inteligência Artificial generativa multimodal e processamento de visão computacional estritamente local.\n\n**Engenharia & Arquitetura:**\n- **Visão Computacional Local:** Orquestração de threads assíncronas em Python empregando OpenCV e MediaPipe para rastreamento biométrico de foco, operando com zero dependência de nuvem.\n- **Motor de Memória RAG:** Integração com LLM (Google Gemini) apoiada em um banco de dados vetorial embutido (ChromaDB) para recuperação semântica e contexto alimentado por deduplicação de tela e áudio do SO.\n- **Interoperabilidade Desktop:** Empacotamento de uma interface React/TypeScript com Tauri v2 (Rust) utilizando arquitetura Sidecar, atingindo performance nativa com baixo impacto de CPU/RAM.\n",
+    "descriptionEn": "Copilot cross-platform desktop studies, powered by multimodal generative AI and strictly local computer vision processing.\n\n**Engineering & Architecture:**\n- **Local Computer Vision:** Asynchronous thread orchestration in Python using OpenCV and MediaPipe for biometric focus tracking, operating with zero cloud dependency.\n- **RAG Memory Engine:** Integration with LLM (Google Gemini) supported by an embedded vector database (ChromaDB) for semantic and context retrieval powered by OS screen and audio deduplication.\n- **Desktop Interoperability:** Packaging of a React/TypeScript interface with Tauri v2 (Rust) using Sidecar architecture, achieving native performance with low CPU/RAM impact.",
+    "customEtiqueta": "Python • Rust (Tauri) • GenAI",
+    "topics": [
+      "HTML",
+      "TypeScript",
+      "Python",
+      "CSS",
+      "Rust",
+      "JavaScript"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/StudIA",
+    "homepage": "https://studia-exe.vercel.app",
+    "coverImage": "https://api.microlink.io/?url=https%3A%2F%2Fstudia-exe.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
+  },
+  {
+    "title": "TechLens",
+    "description": "Dashboard de telemetria de hardware em tempo real criado para o isolamento e monitoramento de dados dinâmicos de sensores.\n\n**Engenharia & Arquitetura:**\n- **Simulação & API:** Desenvolvimento de um daemon gerador de ondas de estresse e uma API RESTful de alta performance orquestrada em Python via FastAPI.\n- **Cache Local & Persistência:** Implementação do banco de dados Redis executado nativamente em ambiente conteinerizado Docker.\n- **Interface Reativa:** Construção de um front-end em Next.js com implementação de Cache Global para garantir o processamento fluido de métricas críticas.\n",
+    "descriptionEn": "Real-time hardware telemetry dashboard built for isolating and monitoring dynamic sensor data.\n\n**Engineering & Architecture:**\n- **Simulation & API:** Development of a stress wave generator daemon and a high-performance RESTful API orchestrated in Python via FastAPI.\n- **Local Cache & Persistence:** Implementation of the Redis database running natively in a Docker containerized environment.\n- **Reactive Interface:** Construction of a front-end in Next.js with Global Cache implementation to ensure fluid processing of critical metrics.",
+    "customEtiqueta": "FastAPI • Next.js • Redis",
+    "topics": [
+      "TypeScript",
+      "Python",
+      "JavaScript",
+      "CSS"
+    ],
+    "html_url": "https://github.com/Zeus-Alvs/TechLens",
+    "homepage": null,
+    "coverImage": "https://repository-images.githubusercontent.com/1237076171/da459633-314f-4b24-9db9-0c84e2127d89"
+  }
+]

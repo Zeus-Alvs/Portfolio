@@ -275,10 +275,11 @@ export default function Collections({ repos = [] }: Props) {
                           {/* Image */}
                           <div
                             style={{
-                              aspectRatio: '16/10',
+                              aspectRatio: '16/9',
                               border: '0.5px solid rgba(255,255,255,0.06)',
                               overflow: 'hidden',
-                              position: 'relative'
+                              position: 'relative',
+                              backgroundColor: '#0a0a0a'
                             }}
                           >
                             <img 
@@ -294,7 +295,8 @@ export default function Collections({ repos = [] }: Props) {
                               style={{
                                 width: '100%',
                                 height: '100%',
-                                objectFit: 'cover'
+                                objectFit: 'cover',
+                                objectPosition: 'top'
                               }}
                             />
                           </div>

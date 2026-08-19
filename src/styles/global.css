@@ -158,3 +158,47 @@ button {
   max-width: 1100px;
   margin: 0 auto;
 }
+.btn-solid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.8rem;
+  border: 0.5px solid var(--color-text);
+  color: var(--color-bg);
+  background: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-solid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  opacity: 0.1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  z-index: 0;
+}
+
+@media (hover: hover) {
+  .btn-solid:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.btn-solid span,
+.btn-solid svg {
+  position: relative;
+  z-index: 1;
+}
+
