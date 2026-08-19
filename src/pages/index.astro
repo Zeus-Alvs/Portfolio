@@ -113,13 +113,26 @@ try {
 
           const combinedTopics = Array.from(new Set([...(repo.topics || []), ...languages]));
           
-          const rawDescription = await getPortfolioDescription(repo.name, fetchOptions, repo.description || '');
+          let rawDescription = await getPortfolioDescription(repo.name, fetchOptions, repo.description || '');
+          
+          let customEtiqueta = null;
+          const fmMatch = rawDescription.match(/^---\s*\n([\s\S]*?)\n---\s*\n/);
+          if (fmMatch) {
+            const fmContent = fmMatch[1];
+            const etiquetaMatch = fmContent.match(/etiqueta:\s*"([^"]+)"/);
+            if (etiquetaMatch) {
+              customEtiqueta = etiquetaMatch[1];
+            }
+            rawDescription = rawDescription.substring(fmMatch[0].length);
+          }
+
           const descriptionEn = await translateToEnglish(rawDescription);
 
           return {
             title: repo.name.replace(/-/g, ' '),
             description: rawDescription,
             descriptionEn: descriptionEn,
+            customEtiqueta: customEtiqueta,
             topics: combinedTopics,
             html_url: repo.html_url,
             homepage: homepage,

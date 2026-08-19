@@ -8,10 +8,12 @@ import { marked } from 'marked';
 export interface GitHubRepo {
   title: string;
   description: string;
+  descriptionEn?: string;
   topics: string[];
   html_url: string;
   homepage: string | null;
   coverImage: string;
+  customEtiqueta?: string | null;
 }
 
 interface Props {
@@ -208,7 +210,7 @@ export default function Collections({ repos = [] }: Props) {
                           fontWeight: 400,
                         }}
                       >
-                        {category}
+                        {project.customEtiqueta || category}
                       </p>
                     </div>
 

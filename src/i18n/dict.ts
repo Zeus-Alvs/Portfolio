@@ -7,7 +7,7 @@ export const dict = {
       github: 'GITHUB',
       timeline: 'LINHA DO TEMPO',
       contact: 'CONTATO',
-      footer: 'SISTEMAS DE SOFTWARE & BACK-END',
+      footer: 'SISTEMAS DE SOFTWARE & ENGENHARIA FULL-STACK',
     },
     hero: {
       portfolio: 'PORTFÓLIO — 2026',
@@ -156,7 +156,7 @@ export const dict = {
       github: 'GITHUB',
       timeline: 'TIMELINE',
       contact: 'CONTACT',
-      footer: 'SOFTWARE SYSTEMS & BACK-END',
+      footer: 'SOFTWARE SYSTEMS & FULL-STACK ENGINEERING',
     },
     hero: {
       portfolio: 'PORTFOLIO — 2026',
